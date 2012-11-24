@@ -8,8 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface VWTAppDelegate : NSObject <NSApplicationDelegate>
+@interface VWTAppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate> {
+	NSStatusItem *statusItem;
+	
+	
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSPopover *popover;
+
+
+@property NSString *ipAddress, *hostName;
+
+- (IBAction)showPopover:(id)sender;
+- (IBAction)windowQuit:(id)sender;
+- (IBAction)popoverQuit:(id)sender;
+
+
 
 @end
