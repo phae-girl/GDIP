@@ -10,4 +10,7 @@
 
 @interface TestClass : NSObject <NSURLConnectionDelegate>
 
+- (void)loadThePage;
+- (NSArray *)getIPAndHost;
+
 @end

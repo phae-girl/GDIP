@@ -23,7 +23,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	ipHandler = [[IPHandler alloc]init];
-	testClass = [[TestClass alloc]init];
+	
 	
 }
 
@@ -44,7 +44,14 @@
 	[statusItem setImage:[NSImage imageNamed:@"network"]];
 	[statusItem setHighlightMode:YES];
 	[statusItem setTarget:ipHandler];
-	[statusItem setAction:@selector(showPopover:)];
+	[statusItem setAction:@selector(prepareToShowPopover:)];
+}
+
+- (void)prepareToShowPopover:(id)sender
+{
+	testClass = [[TestClass alloc]init];
+	[testClass loadThePage];
+	[testClass getIPAndHost];
 }
 
 - (NSString *)checkIP
