@@ -7,22 +7,22 @@
 //
 
 #import "AppDelegate.h"
-#import "IPHandler.h"
+//#import "IPHandler.h"
 #import "TestClass.h"
 
 @implementation AppDelegate {
 	NSStatusItem *statusItem;
 	NSAlert *alert;
-	IPHandler *ipHandler;
+	//IPHandler *ipHandler;
 	TestClass *testClass;
 }
 
-@synthesize ipAddress, hostName;
+//@synthesize ipAddress, hostName;
 @synthesize popover = _popover;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	ipHandler = [[IPHandler alloc]init];
+	//ipHandler = [[IPHandler alloc]init];
 	
 	
 }
@@ -43,7 +43,7 @@
 	[statusItem setToolTip:@"Show My IP"];
 	[statusItem setImage:[NSImage imageNamed:@"network"]];
 	[statusItem setHighlightMode:YES];
-	[statusItem setTarget:ipHandler];
+	//[statusItem setTarget:ipHandler];
 	[statusItem setAction:@selector(prepareToShowPopover:)];
 }
 
