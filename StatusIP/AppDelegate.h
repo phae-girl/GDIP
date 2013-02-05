@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface VWTAppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate> {
 	
 	
 }

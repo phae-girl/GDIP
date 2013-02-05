@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Phaedra Deepsky. All rights reserved.
 //
 
-#import "VWTAppDelegate.h"
+#import "AppDelegate.h"
 #import "IPHandler.h"
 
-@implementation VWTAppDelegate {
+@implementation AppDelegate {
 	NSStatusItem *statusItem;
 	IPHandler *ipHandler;
 }
