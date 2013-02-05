@@ -10,4 +10,6 @@
 
 @interface IPHandler : NSObject
 
+- (BOOL)checkInternetConnection;
+
 @end

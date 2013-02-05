@@ -8,15 +8,29 @@
 
 #import "IPHandler.h"
 
-@implementation IPHandler
+@implementation IPHandler {
+	NSArray *connectionTestSites;
+}
 
 - (id)init
 {
     self = [super init];
     if (self) {
         NSLog(@"Handler init!");
+		connectionTestSites = [NSArray arrayWithObjects:@"http://www.google.com", @"http://www.squarespace.com", @"http://www.amazon.com", @"http://www.apple.com", nil];
     }
     return self;
+}
+
+- (BOOL)checkInternetConnection
+{
+	for (NSString *connectionTestSite in connectionTestSites) {
+		NSData *testData = [NSData dataWithContentsOfURL:[NSURL URLWithString:connectionTestSite]];
+		if (testData) {
+			return YES;
+		}
+	}
+	return NO;
 }
 
 @end

@@ -20,6 +20,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	ipHandler = [[IPHandler alloc]init];
+	if ([ipHandler checkInternetConnection]) {
+		NSLog(@"We have a connexion");
+	}
+	else {
+		NSLog(@"We have no connexion");
+	}
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
