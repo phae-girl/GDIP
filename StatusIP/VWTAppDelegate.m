@@ -7,9 +7,11 @@
 //
 
 #import "VWTAppDelegate.h"
+#import "IPHandler.h"
 
 @implementation VWTAppDelegate {
 	NSStatusItem *statusItem;
+	IPHandler *ipHandler;
 }
 
 @synthesize ipAddress, hostName;
@@ -17,7 +19,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	
+	ipHandler = [[IPHandler alloc]init];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
