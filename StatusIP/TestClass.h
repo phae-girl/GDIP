@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TestClass : NSObject
+@interface TestClass : NSObject <NSURLConnectionDelegate>
 
 @end
