@@ -23,7 +23,7 @@
     return self;
 }
 
-- (void)
+- (void)someMethod{}
 
 - (BOOL)checkInternetConnection
 {
