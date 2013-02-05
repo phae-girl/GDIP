@@ -18,6 +18,7 @@
     if (self) {
         NSLog(@"Handler init!");
 		connectionTestSites = [NSArray arrayWithObjects:@"http://www.google.com", @"http://www.squarespace.com", @"http://www.amazon.com", @"http://www.apple.com", nil];
+		
     }
     return self;
 }
@@ -31,6 +32,42 @@
 		}
 	}
 	return NO;
+}
+
+- (NSArray *)ipAndHost {
+	NSArray *ipAndHost;
+	
+	NSString *ipAddress;
+	NSString *hostName;
+	
+	
+	return ipAndHost;
+}
+
+- (NSString *)loadIPPage
+{
+	NSError *error = nil;
+	NSURL *theURL = [NSURL URLWithString:@"http://checkip.dyndns.com/"];
+	NSString *thePage = [NSString stringWithContentsOfURL:theURL
+												 encoding:NSUTF8StringEncoding
+													error:&error];
+	if (!thePage && [self checkInternetConnection]) {
+		
+		NSAlert* alert = [NSAlert alertWithMessageText:@"No Internet Connection"
+								defaultButton:@"Ok"
+							  alternateButton:nil
+								  otherButton:nil
+					informativeTextWithFormat:@"Check your internet connexion and try again"];
+		[alert runModal];
+
+	}
+	
+	return thePage;
+}
+
+- (NSString *)parseIPAddress: (NSString *)anIP
+{
+	
 }
 
 @end

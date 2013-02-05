@@ -21,7 +21,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	ipHandler = [[IPHandler alloc]init];
-	}
+	
+}
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
 	
@@ -29,17 +30,17 @@
 
 - (void)popoverWillShow:(NSNotification *)notification
 {
-	self.ipAddress = [self checkIP];
-	self.hostName = [self getHostName];
+	//self.ipAddress = [self checkIP];
+	//self.hostName = [self getHostName];
 }
 
-- (void)awakeFromNib {
-	
+- (void)awakeFromNib
+{
 	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	[statusItem setToolTip:@"Show My IP"];
-	//[statusItem setTitle:ipAddress];
 	[statusItem setImage:[NSImage imageNamed:@"network"]];
 	[statusItem setHighlightMode:YES];
+	[statusItem setTarget:ipHandler];
 	[statusItem setAction:@selector(showPopover:)];
 }
 
@@ -54,6 +55,8 @@
 	NSString *thePage = [NSString stringWithContentsOfURL:theURL
 												 encoding:NSUTF8StringEncoding
 													error:&error];
+	NSLog(@"%@", thePage);
+	
 	if (!error) {
 		// The NSRegularExpression class is currently only available in the Foundation framework of iOS 4
 		NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3}"
@@ -87,17 +90,7 @@
 
 - (IBAction)showPopover:(id)sender
 {
-	if ([ipHandler checkInternetConnection]) {
-		[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
-	}
-	else {
-		alert = [NSAlert alertWithMessageText:@"No Internet Connection"
-								defaultButton:@"Ok"
-							  alternateButton:nil
-								  otherButton:nil
-					informativeTextWithFormat:@"Check your internet connexion and try again"];
-		[alert runModal];
-	}
+	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
 }
 
 - (IBAction)windowQuit:(id)sender {

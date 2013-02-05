@@ -10,6 +10,11 @@
 
 @interface IPHandler : NSObject
 
+
+
 - (BOOL)checkInternetConnection;
+- (NSString *)loadIPPage;
+- (NSArray *)ipAndHost;
+
 
 @end
