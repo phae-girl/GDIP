@@ -17,6 +17,7 @@
 @property (weak) IBOutlet NSPopover *popover;
 
 
+
 @property NSString *ipAddress, *hostName;
 
 - (IBAction)showPopover:(id)sender;

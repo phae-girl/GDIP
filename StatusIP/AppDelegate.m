@@ -11,6 +11,7 @@
 
 @implementation AppDelegate {
 	NSStatusItem *statusItem;
+	NSAlert *alert;
 	IPHandler *ipHandler;
 }
 
@@ -20,22 +21,19 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	ipHandler = [[IPHandler alloc]init];
-	if ([ipHandler checkInternetConnection]) {
-		NSLog(@"We have a connexion");
 	}
-	else {
-		NSLog(@"We have no connexion");
-	}
-
-}
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
 	
 }
 
-- (void)awakeFromNib {
+- (void)popoverWillShow:(NSNotification *)notification
+{
 	self.ipAddress = [self checkIP];
 	self.hostName = [self getHostName];
+}
+
+- (void)awakeFromNib {
 	
 	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	[statusItem setToolTip:@"Show My IP"];
@@ -43,11 +41,10 @@
 	[statusItem setImage:[NSImage imageNamed:@"network"]];
 	[statusItem setHighlightMode:YES];
 	[statusItem setAction:@selector(showPopover:)];
-	
-	
 }
 
-- (NSString *)checkIP {
+- (NSString *)checkIP
+{
 	NSString *theIP = [NSString string];
 	
 	NSError *error = nil;
@@ -82,13 +79,25 @@
 	return theIP;
 }
 
-- (NSString *)getHostName {
+- (NSString *)getHostName
+{
 	NSHost *theHost = [NSHost hostWithAddress:[self checkIP]];
 	return [theHost name];
 }
 
-- (IBAction)showPopover:(id)sender {
-	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
+- (IBAction)showPopover:(id)sender
+{
+	if ([ipHandler checkInternetConnection]) {
+		[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
+	}
+	else {
+		alert = [NSAlert alertWithMessageText:@"No Internet Connection"
+								defaultButton:@"Ok"
+							  alternateButton:nil
+								  otherButton:nil
+					informativeTextWithFormat:@"Check your internet connexion and try again"];
+		[alert runModal];
+	}
 }
 
 - (IBAction)windowQuit:(id)sender {
