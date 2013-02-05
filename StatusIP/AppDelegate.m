@@ -8,11 +8,13 @@
 
 #import "AppDelegate.h"
 #import "IPHandler.h"
+#import "TestClass.h"
 
 @implementation AppDelegate {
 	NSStatusItem *statusItem;
 	NSAlert *alert;
 	IPHandler *ipHandler;
+	TestClass *testClass;
 }
 
 @synthesize ipAddress, hostName;
@@ -21,6 +23,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	ipHandler = [[IPHandler alloc]init];
+	testClass = [[TestClass alloc]init];
 	
 }
 
