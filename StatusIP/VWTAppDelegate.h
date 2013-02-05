@@ -9,12 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 @interface VWTAppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate> {
-	NSStatusItem *statusItem;
 	
 	
 }
 
-@property (assign) IBOutlet NSWindow *window;
+
 @property (weak) IBOutlet NSPopover *popover;
 
 

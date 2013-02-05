@@ -8,7 +8,9 @@
 
 #import "VWTAppDelegate.h"
 
-@implementation VWTAppDelegate
+@implementation VWTAppDelegate {
+	NSStatusItem *statusItem;
+}
 
 @synthesize ipAddress, hostName;
 @synthesize popover = _popover;
@@ -86,10 +88,6 @@
 
 - (IBAction)popoverQuit:(id)sender {
 	[NSApp terminate:nil];
-}
-
-- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover {
-	return _window;
 }
 
 
