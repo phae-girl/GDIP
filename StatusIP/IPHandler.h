@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IPHandler : NSObject
+@interface IPHandler : NSObject <NSURLConnectionDelegate>
 
 
 

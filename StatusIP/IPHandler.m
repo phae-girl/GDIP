@@ -23,6 +23,8 @@
     return self;
 }
 
+- (void)
+
 - (BOOL)checkInternetConnection
 {
 	for (NSString *connectionTestSite in connectionTestSites) {
@@ -67,7 +69,32 @@
 
 - (NSString *)parseIPAddress: (NSString *)anIP
 {
+	NSError *error;
+	NSMutableArray *arrayOfMatchStrings;
 	
+	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3}"
+																		   options:NSRegularExpressionDotMatchesLineSeparators | NSRegularExpressionAnchorsMatchLines
+																			 error:&error];
+	if (error) {
+		return [NSString stringWithFormat:@"Error: %ld %@", [error code], [error localizedDescription]];
+	}
+	
+	NSArray *matchArray = [regex matchesInString:anIP
+										 options:0
+										   range:NSMakeRange(0, [anIP length])];
+	
+	for (NSTextCheckingResult *match in matchArray) {
+		NSString *substringForMatch = [anIP substringWithRange:match.range];
+		[arrayOfMatchStrings addObject:substringForMatch];
+		
+	}
+	
+	if ([[arrayOfMatchStrings objectAtIndex:0] isKindOfClass:[NSString class]]) {
+		return [arrayOfMatchStrings objectAtIndex:0];
+		
+	}
+	
+	return [NSString stringWithFormat:@"Error: %ld %@", [error code], [error localizedDescription]];
 }
 
 @end
