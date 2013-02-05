@@ -51,7 +51,7 @@
 {
 	testClass = [[TestClass alloc]init];
 	[testClass loadThePage];
-	[testClass getIPAndHost];
+	//[testClass getIPAndHost];
 }
 
 - (NSString *)checkIP
@@ -92,11 +92,11 @@
 	return theIP;
 }
 
-- (NSString *)getHostName
-{
-	NSHost *theHost = [NSHost hostWithAddress:[self checkIP]];
-	return [theHost name];
-}
+//- (NSString *)getHostName
+//{
+//	//NSHost *theHost = [NSHost hostWithAddress:[self checkIP]];
+//	//return [theHost name];
+//}
 
 - (IBAction)showPopover:(id)sender
 {

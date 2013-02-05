@@ -17,11 +17,14 @@
 	NSString *myString;
 }
 
+@synthesize addressAndHostName;
+
 - (id)init
 {
     self = [super init];
     if (self) {
         NSLog(@"TestClass Init!");
+		addressAndHostName = [NSMutableDictionary dictionary];
 				
     }
     return self;
@@ -36,20 +39,13 @@
 	
 }
 
-- (NSArray *)getIPAndHost
+- (void)setIPAndHost:(NSString *)anIP
 {
-	NSMutableArray *ipAndHost = [NSArray array];
-	//[self loadThePage];
-	//[self parseIPAddress:content];
 	
-	[ipAndHost addObject:[self parseIPAddress:content]];
-	[ipAndHost addObject:[[NSHost hostWithAddress:[ipAndHost objectAtIndex:0]]name]];
-	
-	NSLog(@"%@",ipAndHost);
-	
-	return [NSArray arrayWithArray:ipAndHost];
-	
+	[addressAndHostName setValue:anIP forKey:@"address"];
+	[addressAndHostName setValue:[[NSHost hostWithAddress:anIP]name] forKey:@"hostname"];
 }
+
 - (NSString *)parseIPAddress: (NSString *)anIP
 {
 	NSError *error;
@@ -104,6 +100,8 @@
     // Once this method is invoked, "responseData" contains the complete result
 	content = [[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding];
 	myString = [self parseIPAddress:content];
+	[self setIPAndHost:myString];
+	
 	NSLog(@"Connection finished data %@ %@", content, myString);
 	
 	[conn cancel];

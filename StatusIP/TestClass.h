@@ -13,4 +13,8 @@
 - (void)loadThePage;
 - (NSArray *)getIPAndHost;
 
+@property (readonly) NSMutableDictionary* addressAndHostName;
+
+
+
 @end

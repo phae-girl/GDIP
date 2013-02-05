@@ -1,0 +1,1 @@
+February 5, 2013 - Changed philosophy after reading up on delegates. Abandoned idea of trying to write *all* the error handling code. Using NSURLConnection for the heavy lifting with inspiration from this article at [Cocoa with Love](http://www.cocoawithlove.com/2008/09/cocoa-application-driven-by-http-data.html) 
