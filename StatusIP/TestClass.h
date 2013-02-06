@@ -20,7 +20,7 @@
 @interface TestClass : NSObject <NSURLConnectionDelegate>
 
 - (void)loadThePage;
-- (NSArray *)getIPAndHost;
+//- (NSArray *)getIPAndHost;
 
 @property (readonly) NSMutableDictionary* addressAndHostName;
 @property (weak) id <TestClassDelegate> delegate;

@@ -65,6 +65,7 @@
 						<string key="NSFrame">{{508, 21}, {128, 32}}</string>
 						<reference key="NSSuperview" ref="122421760"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="716967817">
@@ -348,6 +349,7 @@
 							<string key="NSFrame">{{508, 13}, {128, 32}}</string>
 							<reference key="NSSuperview" ref="504272394"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="1064755746">
@@ -451,6 +453,38 @@
 						<reference key="destination" ref="769121218"/>
 					</object>
 					<int key="connectionID">664</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: ipAddress</string>
+						<reference key="source" ref="515400034"/>
+						<reference key="destination" ref="976324537"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="515400034"/>
+							<reference key="NSDestination" ref="976324537"/>
+							<string key="NSLabel">value: ipAddress</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">ipAddress</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">694</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: hostName</string>
+						<reference key="source" ref="413503026"/>
+						<reference key="destination" ref="976324537"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="413503026"/>
+							<reference key="NSDestination" ref="976324537"/>
+							<string key="NSLabel">value: hostName</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">hostName</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">696</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -1430,7 +1464,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">692</int>
+			<int key="maxID">696</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -18,6 +18,7 @@
 
 @synthesize popover = _popover;
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	
@@ -31,6 +32,12 @@
 - (void)popoverWillShow:(NSNotification *)notification
 {
 
+}
+
+- (void)popoverDidClose:(NSNotification *)notification
+{
+	self.hostName = nil;
+	self.ipAddress = nil;
 }
 
 - (void)awakeFromNib
@@ -47,12 +54,15 @@
 	testClass = [[TestClass alloc]init];
 	[testClass setDelegate:self];
 	[testClass loadThePage];
+	[self showPopover:sender];
 }
 
 -(void)ipAndHostDidGetSet
 {
 	NSLog(@"We Did Something Delegated!");
 	NSLog(@"%@", testClass.addressAndHostName);
+	self.ipAddress = [testClass.addressAndHostName valueForKey: @"address"];
+	self.hostName = [testClass.addressAndHostName valueForKey:@"hostname"];
 }
 
 - (IBAction)showPopover:(id)sender
