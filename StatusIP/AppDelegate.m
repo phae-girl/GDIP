@@ -8,14 +8,13 @@
 
 #import "AppDelegate.h"
 
-#import "TestClass.h"
 
-@implementation AppDelegate {
+@implementation AppDelegate
+{
 	NSStatusItem *statusItem;
 	NSAlert *alert;
 	TestClass *testClass;
 }
-
 
 @synthesize popover = _popover;
 
@@ -46,9 +45,15 @@
 - (void)prepareToShowPopover:(id)sender
 {
 	testClass = [[TestClass alloc]init];
+	[testClass setDelegate:self];
 	[testClass loadThePage];
 }
 
+-(void)ipAndHostDidGetSet
+{
+	NSLog(@"We Did Something Delegated!");
+	NSLog(@"%@", testClass.addressAndHostName);
+}
 
 - (IBAction)showPopover:(id)sender
 {

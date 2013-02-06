@@ -6,14 +6,16 @@
 //  Copyright (c) 2012 Phaedra Deepsky. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate>
+#import <Cocoa/Cocoa.h>
+#import "TestClass.h"
+
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, TestClassDelegate>
 
 @property (weak) IBOutlet NSPopover *popover;
 
 - (IBAction)showPopover:(id)sender;
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
-
+- (void)ipAndHostDidGetSet;
 @end

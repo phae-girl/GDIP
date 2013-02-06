@@ -8,12 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+//@class TestClass;
+@protocol TestClassDelegate <NSObject>
+@required
+
+- (void)ipAndHostDidGetSet;
+
+@end
+
+
 @interface TestClass : NSObject <NSURLConnectionDelegate>
 
 - (void)loadThePage;
 - (NSArray *)getIPAndHost;
 
 @property (readonly) NSMutableDictionary* addressAndHostName;
+@property (weak) id <TestClassDelegate> delegate;
+
 
 
 
