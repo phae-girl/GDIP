@@ -10,7 +10,7 @@
 #import <Cocoa/Cocoa.h>
 #import "VWTExternalAddressProcessor.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, TestClassDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, VWTExternalAddressProcessorDelegate>
 
 @property (weak) IBOutlet NSPopover *popover;
 

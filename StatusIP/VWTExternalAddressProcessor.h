@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //@class TestClass;
-@protocol TestClassDelegate <NSObject>
+@protocol VWTExternalAddressProcessorDelegate <NSObject>
 @required
 
 - (void)ipAndHostDidGetSet;
@@ -23,7 +23,7 @@
 //- (NSArray *)getIPAndHost;
 
 @property (readonly) NSMutableDictionary* addressAndHostName;
-@property (weak) id <TestClassDelegate> delegate;
+@property (weak) id <VWTExternalAddressProcessorDelegate> delegate;
 
 
 
