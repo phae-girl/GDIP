@@ -8,7 +8,7 @@
 
 
 #import <Cocoa/Cocoa.h>
-#import "TestClass.h"
+#import "VWTExternalAddressProcessor.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, TestClassDelegate>
 

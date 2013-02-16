@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Phaedra Deepsky. All rights reserved.
 //
 
-#import "TestClass.h"
+#import "VWTExternalAddressProcessor.h"
 
-@implementation TestClass {
+@implementation VWTExternalAddressProcessor {
 	//NSURL *baseURL;
 	//NSURLRequest *request;
 	NSURLConnection *conn;

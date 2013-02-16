@@ -17,7 +17,7 @@
 @end
 
 
-@interface TestClass : NSObject <NSURLConnectionDelegate>
+@interface VWTExternalAddressProcessor : NSObject <NSURLConnectionDelegate>
 
 - (void)loadThePage;
 //- (NSArray *)getIPAndHost;

@@ -14,7 +14,7 @@
 		9100D315166091070002AC7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100D314166091070002AC7A /* AppDelegate.m */; };
 		9100D318166091080002AC7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100D316166091080002AC7A /* MainMenu.xib */; };
 		9100D3271660B9520002AC7A /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9100D3261660B9520002AC7A /* network.png */; };
-		918BA3AD16C0E0ED00A842A8 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 918BA3AC16C0E0ED00A842A8 /* TestClass.m */; };
+		918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		9100D314166091070002AC7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9100D317166091080002AC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9100D3261660B9520002AC7A /* network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = network.png; sourceTree = "<group>"; };
-		918BA3AB16C0E0ED00A842A8 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
-		918BA3AC16C0E0ED00A842A8 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+		918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWTExternalAddressProcessor.h; sourceTree = "<group>"; };
+		918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWTExternalAddressProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 			children = (
 				9100D313166091070002AC7A /* AppDelegate.h */,
 				9100D314166091070002AC7A /* AppDelegate.m */,
-				918BA3AB16C0E0ED00A842A8 /* TestClass.h */,
-				918BA3AC16C0E0ED00A842A8 /* TestClass.m */,
+				918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */,
+				918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */,
 				9100D316166091080002AC7A /* MainMenu.xib */,
 				9100D308166091070002AC7A /* Supporting Files */,
 			);
@@ -178,7 +178,7 @@
 			files = (
 				9100D30E166091070002AC7A /* main.m in Sources */,
 				9100D315166091070002AC7A /* AppDelegate.m in Sources */,
-				918BA3AD16C0E0ED00A842A8 /* TestClass.m in Sources */,
+				918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
