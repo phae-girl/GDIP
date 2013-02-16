@@ -47,7 +47,7 @@
 {
 	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
 	[addressProccessor setDelegate:self];
-	[addressProccessor retrieveIPAndHost];
+	//[addressProccessor retrieveIPAndHost];
 
 	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
 }

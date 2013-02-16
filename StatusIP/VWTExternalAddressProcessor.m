@@ -4,12 +4,13 @@
 
 #import "VWTExternalAddressProcessor.h"
 
-@implementation VWTExternalAddressProcessor {
+@interface VWTExternalAddressProcessor ()
+@property (nonatomic) NSURLConnection *connexion;
+@property (nonatomic) NSMutableData *responseData;
 
-	NSURLConnection *connexion;
-	NSMutableData *responseData;
+@end
 
-}
+@implementation VWTExternalAddressProcessor
 
 
 - (id)init
@@ -18,21 +19,22 @@
     if (self)
 	{
 		_addressAndHostName = [NSMutableDictionary dictionary];
+		[self retrieveIPAndHost];
 	}
     return self;
 }
 
 - (void)retrieveIPAndHost
 {
-	responseData = [NSMutableData data];
+	self.responseData = [NSMutableData data];
 	NSURL *baseURL = [NSURL URLWithString:@"http://checkip.dyndns.com/"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
-	connexion = [NSURLConnection connectionWithRequest:request delegate:self];
+	self.connexion = [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 - (void)setIPAndHost
 {
-	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding]];
+	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:self.responseData encoding:NSUTF8StringEncoding]];
 	[self.addressAndHostName setValue:anIP forKey:@"address"];
 	[self.addressAndHostName setValue:[NSHost hostWithAddress:anIP].name forKey:@"hostname"];
 	[self.addressAndHostName setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
@@ -77,12 +79,12 @@
 //NSURLConnection Delegate Methods
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    [responseData setLength:0];
+    self.responseData.length = 0;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    [responseData appendData:data];
+    [self.responseData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -93,6 +95,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	[self setIPAndHost];
-	[connexion cancel];
+	[self.connexion cancel];
 }
 @end
