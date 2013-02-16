@@ -15,12 +15,6 @@
 
 @synthesize popover = _popover;
 
-
-- (void)popoverWillShow:(NSNotification *)notification
-{
-
-}
-
 - (void)popoverDidClose:(NSNotification *)notification
 {
 	self.hostName = nil;
@@ -33,15 +27,7 @@
 	[statusItem setToolTip:@"Show My IP"];
 	[statusItem setImage:[NSImage imageNamed:@"network"]];
 	[statusItem setHighlightMode:YES];
-	[statusItem setAction:@selector(prepareToShowPopover:)];
-}
-
-- (void)prepareToShowPopover:(id)sender
-{
-	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
-	[addressProccessor setDelegate:self];
-	[addressProccessor retrieveIPAndHost];
-	[self showPopover:sender];
+	[statusItem setAction:@selector(showPopover:)];
 }
 
 -(void)ipAndHostWereSet
@@ -50,8 +36,12 @@
 	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
 }
 
-- (IBAction)showPopover:(id)sender
+- (void)showPopover:(id)sender
 {
+	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
+	[addressProccessor setDelegate:self];
+	[addressProccessor retrieveIPAndHost];
+
 	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
 }
 

@@ -13,8 +13,9 @@
 
 @property (weak) NSString *hostName, *ipAddress;
 
-- (IBAction)showPopover:(id)sender;
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
+
+//Delegated Methods
 - (void)ipAndHostWereSet;
 @end
