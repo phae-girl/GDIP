@@ -6,7 +6,7 @@
 
 @implementation VWTExternalAddressProcessor {
 
-	NSURLConnection *conn;
+	NSURLConnection *connexion;
 	NSMutableData *responseData;
 
 }
@@ -29,7 +29,7 @@
 	responseData = [NSMutableData data];
 	NSURL *baseURL = [NSURL URLWithString:@"http://checkip.dyndns.com/"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
-	conn = [NSURLConnection connectionWithRequest:request delegate:self];
+	connexion = [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 - (void)setIPAndHost
@@ -95,6 +95,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	[self setIPAndHost];
-	[conn cancel];
+	[connexion cancel];
 }
 @end

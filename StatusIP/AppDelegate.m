@@ -16,7 +16,6 @@
 	VWTExternalAddressProcessor *addressProccessor;
 }
 
-@synthesize popover = _popover;
 
 - (void)popoverDidClose:(NSNotification *)notification
 {
