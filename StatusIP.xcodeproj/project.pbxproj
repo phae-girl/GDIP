@@ -96,11 +96,9 @@
 				9100D313166091070002AC7A /* AppDelegate.h */,
 				9100D314166091070002AC7A /* AppDelegate.m */,
 				918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */,
-				919AB57816CF2C280075B2AC /* icons.iconset */,
-				919AB57916CF2C280075B2AC /* statusBarGreen.png */,
-				919AB57A16CF2C280075B2AC /* statusBarRed.png */,
 				918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */,
 				9100D316166091080002AC7A /* MainMenu.xib */,
+				919AB57E16CF2C930075B2AC /* StatusBarIcons */,
 				9100D308166091070002AC7A /* Supporting Files */,
 			);
 			path = StatusIP;
@@ -109,6 +107,7 @@
 		9100D308166091070002AC7A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				919AB57816CF2C280075B2AC /* icons.iconset */,
 				9100D3261660B9520002AC7A /* network.png */,
 				9100D309166091070002AC7A /* StatusIP-Info.plist */,
 				9100D30A166091070002AC7A /* InfoPlist.strings */,
@@ -117,6 +116,15 @@
 				9100D310166091070002AC7A /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		919AB57E16CF2C930075B2AC /* StatusBarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				919AB57916CF2C280075B2AC /* statusBarGreen.png */,
+				919AB57A16CF2C280075B2AC /* statusBarRed.png */,
+			);
+			name = StatusBarIcons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

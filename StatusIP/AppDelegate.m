@@ -1,5 +1,5 @@
 //
-//  StatusIP
+//  StatusIP - AppDelegate.m
 //
 //  Created by Phaedra Deepsky on 2012-11-24.
 
@@ -25,14 +25,14 @@
 {
 	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	[statusItem setToolTip:@"Show My IP"];
-	[statusItem setImage:[NSImage imageNamed:@"network"]];
+	[statusItem setImage:[NSImage imageNamed:@"statusBarGreen"]];
 	[statusItem setHighlightMode:YES];
 	[statusItem setAction:@selector(showPopover:)];
 }
 
 -(void)ipAndHostWereSet
 {
-	self.ipAddress = [addressProccessor.addressAndHostName valueForKey: @"address"];
+	self.ipAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
 	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
 }
 
