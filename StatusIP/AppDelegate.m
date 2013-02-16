@@ -34,6 +34,7 @@
 {
 	self.externalIPAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
 	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
+	_tearOffWindow.title = [[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressProccessor.addressAndHostName valueForKey:@"localizedName"], nil] componentsJoinedByString:@" "];
 }
 
 - (void)showPopover:(id)sender
