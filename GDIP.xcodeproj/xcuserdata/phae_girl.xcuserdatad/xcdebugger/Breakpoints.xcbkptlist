@@ -104,7 +104,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "37"
          endingLineNumber = "37"
-         landmarkName = "-ipAndHostWereSet"
+         landmarkName = "-processorDidRetriveAddressesAndHosts:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -117,8 +117,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "38"
          endingLineNumber = "38"
-         landmarkName = "@implementation AppDelegate"
-         landmarkType = "3">
+         landmarkName = "-processorDidRetriveAddressesAndHosts:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -129,7 +129,9 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "62"
-         endingLineNumber = "62">
+         endingLineNumber = "62"
+         landmarkName = "-detachableWindowForPopover:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
