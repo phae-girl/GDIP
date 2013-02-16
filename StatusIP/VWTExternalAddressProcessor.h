@@ -16,7 +16,6 @@
 
 - (void)retrieveIPAndHost;
 
-
 @property (readonly) NSMutableDictionary* addressAndHostName;
 @property (weak) id <VWTExternalAddressProcessorDelegate> delegate;
 

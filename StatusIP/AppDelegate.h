@@ -10,7 +10,6 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, VWTExternalAddressProcessorDelegate>
 
 @property (weak) IBOutlet NSPopover *popover;
-
 @property (weak) NSString *hostName, *ipAddress;
 
 - (IBAction)windowQuit:(id)sender;

@@ -48,7 +48,8 @@
 																			 error:&error];
 	if (error)
 	{
-		return [NSString stringWithFormat:@"Error: %ld %@", [error code], [error localizedDescription]];
+		[[NSAlert alertWithError:error] runModal];
+		return @"0.0.0.0";
 	}
 	
 	NSArray *matchArray = [regex matchesInString:anIP
@@ -64,13 +65,12 @@
 		
 	}
 	
-	if ([[arrayOfMatchStrings objectAtIndex:0] isKindOfClass:[NSString class]])
+	if (![[arrayOfMatchStrings objectAtIndex:0] isKindOfClass:[NSString class]])
 	{
-		return [arrayOfMatchStrings objectAtIndex:0];
-		
+		[NSAlert alertWithMessageText:@"Something's Wrong!" defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@"There was an error processing the response from http://checkip.dyndns.com. Verify that the site is actually up and running."];
+		return @"0.0.0.0";
 	}
-	
-	return [NSString stringWithFormat:@"Error: %ld %@", [error code], [error localizedDescription]];
+	return [arrayOfMatchStrings objectAtIndex:0];
 }
 
 
