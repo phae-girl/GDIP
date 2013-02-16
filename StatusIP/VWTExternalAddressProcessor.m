@@ -39,7 +39,7 @@
 	[addressesAndHosts setValue:anIP forKey:@"externalAddress"];
 	[addressesAndHosts setValue:[NSHost hostWithAddress:anIP].name forKey:@"externalHostName"];
 	[addressesAndHosts setValue:[[NSHost currentHost].addresses objectAtIndex:1] forKey:@"localAddress"];
-	[addressesAndHosts setValue:[NSHost currentHost].names forKey:@"localHostName"];
+	[addressesAndHosts setValue:[NSHost currentHost].name forKey:@"localHostName"];
 	[addressesAndHosts setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
 	[self.delegate processorDidRetriveAddressesAndHosts:addressesAndHosts];
 }
