@@ -8,7 +8,6 @@
 @protocol VWTExternalAddressProcessorDelegate <NSObject>
 @required
 
-- (void)ipAndHostWereSet;
 - (void)processorDidRetriveAddressesAndHosts: (NSDictionary *)addressesAndHosts;
 
 @end

@@ -14,6 +14,7 @@
 
 
 @property (weak) NSString *hostName, *externalIPAddress, *localIPAddress, *localHostName;
+@property NSDictionary *myDictionary;
 
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
