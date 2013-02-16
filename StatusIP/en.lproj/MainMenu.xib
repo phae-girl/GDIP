@@ -57,7 +57,7 @@
 				<bool key="NSAnimates">YES</bool>
 			</object>
 			<object class="NSCustomView" id="122421760">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="108433914">
@@ -165,7 +165,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{662, 13}, {128, 32}}</string>
 						<reference key="NSSuperview" ref="122421760"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="716967817">
@@ -290,7 +289,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{804, 162}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="723182750"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="NSClassName">NSView</string>
@@ -305,7 +303,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="504272394">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSTextField" id="413639246">
@@ -417,7 +415,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{609, 36}, {128, 32}}</string>
 							<reference key="NSSuperview" ref="504272394"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="1064755746">
@@ -662,7 +659,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{745, 215}</string>
-					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="640949612"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
@@ -750,15 +746,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.externalAddress</string>
+						<string key="label">value: viewDynamicDataItems.externalAddress</string>
 						<reference key="source" ref="515400034"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="515400034"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.externalAddress</string>
+							<string key="NSLabel">value: viewDynamicDataItems.externalAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.externalAddress</string>
+							<string key="NSKeyPath">viewDynamicDataItems.externalAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -766,15 +762,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.externalHostName</string>
+						<string key="label">value: viewDynamicDataItems.externalHostName</string>
 						<reference key="source" ref="413503026"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="413503026"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.externalHostName</string>
+							<string key="NSLabel">value: viewDynamicDataItems.externalHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.externalHostName</string>
+							<string key="NSKeyPath">viewDynamicDataItems.externalHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -790,15 +786,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">title: myDictionary.tearoffTitle</string>
+						<string key="label">title: viewDynamicDataItems.tearoffTitle</string>
 						<reference key="source" ref="144785885"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="144785885"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">title: myDictionary.tearoffTitle</string>
+							<string key="NSLabel">title: viewDynamicDataItems.tearoffTitle</string>
 							<string key="NSBinding">title</string>
-							<string key="NSKeyPath">myDictionary.tearoffTitle</string>
+							<string key="NSKeyPath">viewDynamicDataItems.tearoffTitle</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -806,15 +802,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.externalAddress</string>
+						<string key="label">value: viewDynamicDataItems.externalAddress</string>
 						<reference key="source" ref="413639246"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="413639246"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.externalAddress</string>
+							<string key="NSLabel">value: viewDynamicDataItems.externalAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.externalAddress</string>
+							<string key="NSKeyPath">viewDynamicDataItems.externalAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -822,15 +818,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.externalHostName</string>
+						<string key="label">value: viewDynamicDataItems.externalHostName</string>
 						<reference key="source" ref="8809700"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="8809700"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.externalHostName</string>
+							<string key="NSLabel">value: viewDynamicDataItems.externalHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.externalHostName</string>
+							<string key="NSKeyPath">viewDynamicDataItems.externalHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -838,15 +834,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.localAddress</string>
+						<string key="label">value: viewDynamicDataItems.localAddress</string>
 						<reference key="source" ref="948149917"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="948149917"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.localAddress</string>
+							<string key="NSLabel">value: viewDynamicDataItems.localAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.localAddress</string>
+							<string key="NSKeyPath">viewDynamicDataItems.localAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -854,15 +850,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.localHostName</string>
+						<string key="label">value: viewDynamicDataItems.localHostName</string>
 						<reference key="source" ref="426320333"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="426320333"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.localHostName</string>
+							<string key="NSLabel">value: viewDynamicDataItems.localHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.localHostName</string>
+							<string key="NSKeyPath">viewDynamicDataItems.localHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -870,15 +866,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.localAddress</string>
+						<string key="label">value: viewDynamicDataItems.localAddress</string>
 						<reference key="source" ref="113294101"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="113294101"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.localAddress</string>
+							<string key="NSLabel">value: viewDynamicDataItems.localAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.localAddress</string>
+							<string key="NSKeyPath">viewDynamicDataItems.localAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -886,15 +882,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: myDictionary.localHostName</string>
+						<string key="label">value: viewDynamicDataItems.localHostName</string>
 						<reference key="source" ref="108433914"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="108433914"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: myDictionary.localHostName</string>
+							<string key="NSLabel">value: viewDynamicDataItems.localHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">myDictionary.localHostName</string>
+							<string key="NSKeyPath">viewDynamicDataItems.localHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>

@@ -28,8 +28,8 @@
 
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
-	self.myDictionary = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
-	[self.myDictionary setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
+	self.viewDynamicDataItems = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
+	[self.viewDynamicDataItems setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
 }
 
 - (void)willSetValue: (NSString*)aString {
