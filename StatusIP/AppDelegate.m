@@ -13,7 +13,7 @@
 {
 	NSStatusItem *statusItem;
 	NSAlert *alert;
-	VWTExternalAddressProcessor *statusIPModel;
+	VWTExternalAddressProcessor *addressProccessor;
 }
 
 @synthesize popover = _popover;
@@ -51,18 +51,18 @@
 
 - (void)prepareToShowPopover:(id)sender
 {
-	statusIPModel = [[VWTExternalAddressProcessor alloc]init];
-	[statusIPModel setDelegate:self];
-	[statusIPModel loadThePage];
+	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
+	[addressProccessor setDelegate:self];
+	[addressProccessor loadThePage];
 	[self showPopover:sender];
 }
 
 -(void)ipAndHostWereSet
 {
 	NSLog(@"We Did Something Delegated!");
-	NSLog(@"%@", statusIPModel.addressAndHostName);
-	self.ipAddress = [statusIPModel.addressAndHostName valueForKey: @"address"];
-	self.hostName = [statusIPModel.addressAndHostName valueForKey:@"hostname"];
+	NSLog(@"%@", addressProccessor.addressAndHostName);
+	self.ipAddress = [addressProccessor.addressAndHostName valueForKey: @"address"];
+	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
 }
 
 - (IBAction)showPopover:(id)sender
