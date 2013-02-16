@@ -9,6 +9,7 @@
 @required
 
 - (void)ipAndHostWereSet;
+- (void)willSetValue: (NSString*)aString;
 
 @end
 

@@ -38,6 +38,7 @@
 	[addressAndHostName setValue:anIP forKey:@"address"];
 	[addressAndHostName setValue:[NSHost hostWithAddress:anIP].name forKey:@"hostname"];
 	[addressAndHostName setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
+	[self.delegate willSetValue:@"This string is from the processor"];
 	[self.delegate ipAndHostWereSet];
 }
 

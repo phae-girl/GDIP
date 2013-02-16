@@ -7,7 +7,7 @@
 #import <Cocoa/Cocoa.h>
 #import "VWTExternalAddressProcessor.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, VWTExternalAddressProcessorDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (weak) IBOutlet NSPopover *popover;
 @property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
@@ -19,5 +19,6 @@
 - (IBAction)popoverQuit:(id)sender;
 
 //Delegated Methods
-- (void)ipAndHostWereSet;
+//- (void)ipAndHostWereSet;
+//- (void)willSetValue: (NSString*)aString;
 @end

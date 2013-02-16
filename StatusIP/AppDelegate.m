@@ -6,6 +6,9 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate() <VWTExternalAddressProcessorDelegate, NSPopoverDelegate>
+
+@end
 
 @implementation AppDelegate
 {
@@ -35,6 +38,10 @@
 	self.externalIPAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
 	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
 	_tearOffWindow.title = [[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressProccessor.addressAndHostName valueForKey:@"localizedName"], nil] componentsJoinedByString:@" "];
+}
+
+- (void)willSetValue: (NSString*)aString {
+	NSLog(@"This is the string:%@", aString);
 }
 
 - (void)showPopover:(id)sender
