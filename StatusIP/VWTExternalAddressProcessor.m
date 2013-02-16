@@ -31,7 +31,7 @@
     return self;
 }
 
-- (void)loadThePage
+- (void)retrieveIPAndHost
 {
 	responseData = [NSMutableData data];
 	NSURL *baseURL = [NSURL URLWithString:@"http://checkip.dyndns.com/"];

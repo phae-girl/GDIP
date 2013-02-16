@@ -19,8 +19,8 @@
 
 @interface VWTExternalAddressProcessor : NSObject <NSURLConnectionDelegate>
 
-- (void)loadThePage;
-//- (NSArray *)getIPAndHost;
+- (void)retrieveIPAndHost;
+
 
 @property (readonly) NSMutableDictionary* addressAndHostName;
 @property (weak) id <VWTExternalAddressProcessorDelegate> delegate;

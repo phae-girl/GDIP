@@ -53,7 +53,7 @@
 {
 	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
 	[addressProccessor setDelegate:self];
-	[addressProccessor loadThePage];
+	[addressProccessor retrieveIPAndHost];
 	[self showPopover:sender];
 }
 
