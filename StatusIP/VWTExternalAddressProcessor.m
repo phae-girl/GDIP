@@ -4,40 +4,44 @@
 
 #import "VWTExternalAddressProcessor.h"
 
-@implementation VWTExternalAddressProcessor {
+@interface VWTExternalAddressProcessor ()
+@property (nonatomic) NSURLConnection *connexion;
+@property (nonatomic) NSMutableData *responseData;
 
-	NSURLConnection *conn;
-	NSMutableData *responseData;
+@end
 
-}
+@implementation VWTExternalAddressProcessor
 
-@synthesize addressAndHostName;
-@synthesize delegate;
 
 - (id)init
 {
     self = [super init];
     if (self)
 	{
-		addressAndHostName = [NSMutableDictionary dictionary];
+		//_addressAndHostName = [NSMutableDictionary dictionary];
+		[self retrieveIPAndHost];
 	}
     return self;
 }
 
 - (void)retrieveIPAndHost
 {
-	responseData = [NSMutableData data];
+	self.responseData = [NSMutableData data];
 	NSURL *baseURL = [NSURL URLWithString:@"http://checkip.dyndns.com/"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
-	conn = [NSURLConnection connectionWithRequest:request delegate:self];
+	self.connexion = [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 - (void)setIPAndHost
 {
-	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding]];
-	[addressAndHostName setValue:anIP forKey:@"address"];
-	[addressAndHostName setValue:[[NSHost hostWithAddress:anIP]name] forKey:@"hostname"];
-	[self.delegate ipAndHostWereSet];
+	NSMutableDictionary* addressesAndHosts = [NSMutableDictionary dictionary];
+	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:self.responseData encoding:NSUTF8StringEncoding]];
+	[addressesAndHosts setValue:anIP forKey:@"externalAddress"];
+	[addressesAndHosts setValue:[NSHost hostWithAddress:anIP].name forKey:@"externalHostName"];
+	[addressesAndHosts setValue:[[NSHost currentHost].addresses objectAtIndex:1] forKey:@"localAddress"];
+	[addressesAndHosts setValue:[NSHost currentHost].name forKey:@"localHostName"];
+	[addressesAndHosts setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
+	[self.delegate processorDidRetriveAddressesAndHosts:addressesAndHosts];
 }
 
 - (NSString *)parseIPAddress: (NSString *)anIP
@@ -77,12 +81,12 @@
 //NSURLConnection Delegate Methods
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    [responseData setLength:0];
+    self.responseData.length = 0;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    [responseData appendData:data];
+    [self.responseData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -93,6 +97,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	[self setIPAndHost];
-	[conn cancel];
+	[self.connexion cancel];
 }
 @end

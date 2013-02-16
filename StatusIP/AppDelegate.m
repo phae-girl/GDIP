@@ -6,6 +6,9 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate() <VWTExternalAddressProcessorDelegate, NSPopoverDelegate>
+
+@end
 
 @implementation AppDelegate
 {
@@ -13,12 +16,11 @@
 	VWTExternalAddressProcessor *addressProccessor;
 }
 
-@synthesize popover = _popover;
 
 - (void)popoverDidClose:(NSNotification *)notification
 {
-	self.hostName = nil;
-	self.ipAddress = nil;
+	//self.hostName = nil;
+	//self.externalIPAddress = nil;
 }
 
 - (void)awakeFromNib
@@ -30,19 +32,34 @@
 	[statusItem setAction:@selector(showPopover:)];
 }
 
--(void)ipAndHostWereSet
+- (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
-	self.ipAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
-	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
+	self.myDictionary = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
+	[self.myDictionary setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
+}
+
+//-(void)ipAndHostWereSet
+//{
+//	self.externalIPAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
+//	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
+//	_tearOffWindow.title = [[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressProccessor.addressAndHostName valueForKey:@"localizedName"], nil] componentsJoinedByString:@" "];
+//}
+
+- (void)willSetValue: (NSString*)aString {
+	NSLog(@"This is the string:%@", aString);
 }
 
 - (void)showPopover:(id)sender
 {
 	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
 	[addressProccessor setDelegate:self];
-	[addressProccessor retrieveIPAndHost];
+	//[addressProccessor retrieveIPAndHost];
 
 	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
+}
+
+- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover {
+	return _tearOffWindow;
 }
 
 - (IBAction)windowQuit:(id)sender {

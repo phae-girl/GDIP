@@ -8,15 +8,15 @@
 @protocol VWTExternalAddressProcessorDelegate <NSObject>
 @required
 
-- (void)ipAndHostWereSet;
+- (void)processorDidRetriveAddressesAndHosts: (NSDictionary *)addressesAndHosts;
 
 @end
 
 @interface VWTExternalAddressProcessor : NSObject <NSURLConnectionDelegate>
 
-- (void)retrieveIPAndHost;
+//- (void)retrieveIPAndHost;
 
-@property (readonly) NSMutableDictionary* addressAndHostName;
+//@property (readonly) 
 @property (weak) id <VWTExternalAddressProcessorDelegate> delegate;
 
 @end
