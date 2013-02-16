@@ -12,7 +12,7 @@
 @protocol VWTExternalAddressProcessorDelegate <NSObject>
 @required
 
-- (void)ipAndHostDidGetSet;
+- (void)ipAndHostWereSet;
 
 @end
 

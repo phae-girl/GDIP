@@ -57,7 +57,7 @@
 	[self showPopover:sender];
 }
 
--(void)ipAndHostDidGetSet
+-(void)ipAndHostWereSet
 {
 	NSLog(@"We Did Something Delegated!");
 	NSLog(@"%@", statusIPModel.addressAndHostName);

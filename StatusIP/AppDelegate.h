@@ -19,5 +19,5 @@
 - (IBAction)showPopover:(id)sender;
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
-- (void)ipAndHostDidGetSet;
+- (void)ipAndHostWereSet;
 @end

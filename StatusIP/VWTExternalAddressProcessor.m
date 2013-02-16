@@ -45,7 +45,7 @@
 	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding]];
 	[addressAndHostName setValue:anIP forKey:@"address"];
 	[addressAndHostName setValue:[[NSHost hostWithAddress:anIP]name] forKey:@"hostname"];
-	[self.delegate ipAndHostDidGetSet];
+	[self.delegate ipAndHostWereSet];
 }
 
 - (NSString *)parseIPAddress: (NSString *)anIP
