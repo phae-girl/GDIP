@@ -55,5 +55,14 @@
 	[NSApp terminate:nil];
 }
 
+- (IBAction)copyExternalIPToPasteboard:(id)sender{
+	
+	NSPasteboard *pb = [NSPasteboard generalPasteboard];
+	[pb clearContents];
+	[pb writeObjects:[NSArray arrayWithObjects:[self.viewDynamicDataItems valueForKey:@"externalAddress"], nil]];
+	
+}
+
+
 
 @end

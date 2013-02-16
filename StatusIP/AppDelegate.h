@@ -17,4 +17,6 @@
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
 
+- (IBAction)copyExternalIPToPasteboard:(id)sender;
+
 @end
