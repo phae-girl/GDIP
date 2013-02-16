@@ -17,8 +17,8 @@
 
 - (void)popoverDidClose:(NSNotification *)notification
 {
-	self.hostName = nil;
-	self.ipAddress = nil;
+	//self.hostName = nil;
+	//self.externalIPAddress = nil;
 }
 
 - (void)awakeFromNib
@@ -32,7 +32,7 @@
 
 -(void)ipAndHostWereSet
 {
-	self.ipAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
+	self.externalIPAddress = [addressProccessor.addressAndHostName valueForKey:@"address"];
 	self.hostName = [addressProccessor.addressAndHostName valueForKey:@"hostname"];
 }
 

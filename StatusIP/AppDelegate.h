@@ -13,7 +13,7 @@
 @property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
 
 
-@property (weak) NSString *hostName, *ipAddress;
+@property (weak) NSString *hostName, *externalIPAddress, *localIPAddress, *localHostName;
 
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
