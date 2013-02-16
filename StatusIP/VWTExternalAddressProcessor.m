@@ -11,15 +11,13 @@
 
 }
 
-@synthesize addressAndHostName;
-@synthesize delegate;
 
 - (id)init
 {
     self = [super init];
     if (self)
 	{
-		addressAndHostName = [NSMutableDictionary dictionary];
+		_addressAndHostName = [NSMutableDictionary dictionary];
 	}
     return self;
 }
@@ -35,9 +33,9 @@
 - (void)setIPAndHost
 {
 	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding]];
-	[addressAndHostName setValue:anIP forKey:@"address"];
-	[addressAndHostName setValue:[NSHost hostWithAddress:anIP].name forKey:@"hostname"];
-	[addressAndHostName setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
+	[self.addressAndHostName setValue:anIP forKey:@"address"];
+	[self.addressAndHostName setValue:[NSHost hostWithAddress:anIP].name forKey:@"hostname"];
+	[self.addressAndHostName setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
 	[self.delegate willSetValue:@"This string is from the processor"];
 	[self.delegate ipAndHostWereSet];
 }
