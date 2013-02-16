@@ -45,6 +45,10 @@
 	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
 }
 
+- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover {
+	return _tearOffWindow;
+}
+
 - (IBAction)windowQuit:(id)sender {
 	[NSApp terminate:nil];
 }

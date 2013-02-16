@@ -10,6 +10,9 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate, VWTExternalAddressProcessorDelegate>
 
 @property (weak) IBOutlet NSPopover *popover;
+@property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
+
+
 @property (weak) NSString *hostName, *ipAddress;
 
 - (IBAction)windowQuit:(id)sender;
