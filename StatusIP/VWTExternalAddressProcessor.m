@@ -1,20 +1,14 @@
-//
-//  TestClass.m
 //  StatusIP
 //
 //  Created by Phaedra Deepsky on 2013-02-05.
-//  Copyright (c) 2013 Phaedra Deepsky. All rights reserved.
-//
 
 #import "VWTExternalAddressProcessor.h"
 
 @implementation VWTExternalAddressProcessor {
-	//NSURL *baseURL;
-	//NSURLRequest *request;
+
 	NSURLConnection *conn;
 	NSMutableData *responseData;
-	//NSString *content;
-	//NSString *myString;
+
 }
 
 @synthesize addressAndHostName;
@@ -23,11 +17,10 @@
 - (id)init
 {
     self = [super init];
-    if (self) {
-        NSLog(@"TestClass Init!");
+    if (self)
+	{
 		addressAndHostName = [NSMutableDictionary dictionary];
-		
-    }
+	}
     return self;
 }
 
@@ -37,7 +30,6 @@
 	NSURL *baseURL = [NSURL URLWithString:@"http://checkip.dyndns.com/"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
 	conn = [NSURLConnection connectionWithRequest:request delegate:self];
-	
 }
 
 - (void)setIPAndHost
@@ -51,10 +43,11 @@
 - (NSString *)parseIPAddress: (NSString *)anIP
 {
 	NSError *error;
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3}"
+	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
 																		   options:NSRegularExpressionDotMatchesLineSeparators | NSRegularExpressionAnchorsMatchLines
 																			 error:&error];
-	if (error) {
+	if (error)
+	{
 		return [NSString stringWithFormat:@"Error: %ld %@", [error code], [error localizedDescription]];
 	}
 	
@@ -64,13 +57,15 @@
 	
 	NSMutableArray *arrayOfMatchStrings = [NSMutableArray array];
 	
-	for (NSTextCheckingResult *match in matchArray) {
+	for (NSTextCheckingResult *match in matchArray)
+	{
 		NSString *substringForMatch = [anIP substringWithRange:match.range];
 		[arrayOfMatchStrings addObject:substringForMatch];
 		
 	}
 	
-	if ([[arrayOfMatchStrings objectAtIndex:0] isKindOfClass:[NSString class]]) {
+	if ([[arrayOfMatchStrings objectAtIndex:0] isKindOfClass:[NSString class]])
+	{
 		return [arrayOfMatchStrings objectAtIndex:0];
 		
 	}
@@ -83,13 +78,11 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     [responseData setLength:0];
-	NSLog(@"Connection rec'd response");
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     [responseData appendData:data];
-	NSLog(@"Connection rec'd data");
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -99,11 +92,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    // Once this method is invoked, "responseData" contains the complete result
-	
 	[self setIPAndHost];
 	[conn cancel];
 }
-
-
 @end
