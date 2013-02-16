@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9100D2FC166091070002AC7A"
                BuildableName = "StatusIP.app"
-               BlueprintName = "StatusIP"
-               ReferencedContainer = "container:StatusIP.xcodeproj">
+               BlueprintName = "GDIP"
+               ReferencedContainer = "container:GDIP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9100D2FC166091070002AC7A"
             BuildableName = "StatusIP.app"
-            BlueprintName = "StatusIP"
-            ReferencedContainer = "container:StatusIP.xcodeproj">
+            BlueprintName = "GDIP"
+            ReferencedContainer = "container:GDIP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9100D2FC166091070002AC7A"
             BuildableName = "StatusIP.app"
-            BlueprintName = "StatusIP"
-            ReferencedContainer = "container:StatusIP.xcodeproj">
+            BlueprintName = "GDIP"
+            ReferencedContainer = "container:GDIP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9100D2FC166091070002AC7A"
             BuildableName = "StatusIP.app"
-            BlueprintName = "StatusIP"
-            ReferencedContainer = "container:StatusIP.xcodeproj">
+            BlueprintName = "GDIP"
+            ReferencedContainer = "container:GDIP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,4 +1,4 @@
-//  StatusIP - VWTExternalAddressProcessor.h
+//  GDIP - VWTExternalAddressProcessor.h
 //
 //  Created by Phaedra Deepsky on 2013-02-05.
 

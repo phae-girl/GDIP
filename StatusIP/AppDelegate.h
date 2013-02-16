@@ -1,5 +1,5 @@
 //
-//  StatusIP - AppDelegate.h
+//  GDIP - AppDelegate.h
 //
 //  Created by Phaedra Deepsky on 2012-11-24.
 

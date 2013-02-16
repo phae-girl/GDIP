@@ -21,15 +21,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9100D2FD166091070002AC7A /* StatusIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9100D2FD166091070002AC7A /* GDIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9100D301166091070002AC7A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9100D304166091070002AC7A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9100D305166091070002AC7A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9100D306166091070002AC7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9100D309166091070002AC7A /* StatusIP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StatusIP-Info.plist"; sourceTree = "<group>"; };
+		9100D309166091070002AC7A /* GDIP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GDIP-Info.plist"; sourceTree = "<group>"; };
 		9100D30B166091070002AC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9100D30D166091070002AC7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9100D30F166091070002AC7A /* StatusIP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StatusIP-Prefix.pch"; sourceTree = "<group>"; };
+		9100D30F166091070002AC7A /* GDIP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GDIP-Prefix.pch"; sourceTree = "<group>"; };
 		9100D311166091070002AC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		9100D313166091070002AC7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9100D314166091070002AC7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		9100D2FE166091070002AC7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9100D2FD166091070002AC7A /* StatusIP.app */,
+				9100D2FD166091070002AC7A /* GDIP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,10 +109,10 @@
 			children = (
 				919AB57816CF2C280075B2AC /* icons.iconset */,
 				9100D3261660B9520002AC7A /* network.png */,
-				9100D309166091070002AC7A /* StatusIP-Info.plist */,
+				9100D309166091070002AC7A /* GDIP-Info.plist */,
 				9100D30A166091070002AC7A /* InfoPlist.strings */,
 				9100D30D166091070002AC7A /* main.m */,
-				9100D30F166091070002AC7A /* StatusIP-Prefix.pch */,
+				9100D30F166091070002AC7A /* GDIP-Prefix.pch */,
 				9100D310166091070002AC7A /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9100D2FC166091070002AC7A /* StatusIP */ = {
+		9100D2FC166091070002AC7A /* GDIP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9100D31B166091080002AC7A /* Build configuration list for PBXNativeTarget "StatusIP" */;
+			buildConfigurationList = 9100D31B166091080002AC7A /* Build configuration list for PBXNativeTarget "GDIP" */;
 			buildPhases = (
 				9100D2F9166091070002AC7A /* Sources */,
 				9100D2FA166091070002AC7A /* Frameworks */,
@@ -142,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = StatusIP;
+			name = GDIP;
 			productName = StatusIP;
-			productReference = 9100D2FD166091070002AC7A /* StatusIP.app */;
+			productReference = 9100D2FD166091070002AC7A /* GDIP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +157,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Phaedra Deepsky";
 			};
-			buildConfigurationList = 9100D2F7166091070002AC7A /* Build configuration list for PBXProject "StatusIP" */;
+			buildConfigurationList = 9100D2F7166091070002AC7A /* Build configuration list for PBXProject "GDIP" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9100D2FC166091070002AC7A /* StatusIP */,
+				9100D2FC166091070002AC7A /* GDIP */,
 			);
 		};
 /* End PBXProject section */
@@ -290,9 +290,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StatusIP/StatusIP-Prefix.pch";
-				INFOPLIST_FILE = "StatusIP/StatusIP-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StatusIP/GDIP-Prefix.pch";
+				INFOPLIST_FILE = "StatusIP/GDIP-Info.plist";
+				PRODUCT_NAME = GDIP;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -302,9 +302,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StatusIP/StatusIP-Prefix.pch";
-				INFOPLIST_FILE = "StatusIP/StatusIP-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StatusIP/GDIP-Prefix.pch";
+				INFOPLIST_FILE = "StatusIP/GDIP-Info.plist";
+				PRODUCT_NAME = GDIP;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -312,7 +312,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9100D2F7166091070002AC7A /* Build configuration list for PBXProject "StatusIP" */ = {
+		9100D2F7166091070002AC7A /* Build configuration list for PBXProject "GDIP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9100D319166091080002AC7A /* Debug */,
@@ -321,7 +321,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9100D31B166091080002AC7A /* Build configuration list for PBXNativeTarget "StatusIP" */ = {
+		9100D31B166091080002AC7A /* Build configuration list for PBXNativeTarget "GDIP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9100D31C166091080002AC7A /* Debug */,

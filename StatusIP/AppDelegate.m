@@ -1,5 +1,5 @@
 //
-//  StatusIP - AppDelegate.m
+//  GDIP - AppDelegate.m
 //
 //  Created by Phaedra Deepsky on 2012-11-24.
 
