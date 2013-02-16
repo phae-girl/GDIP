@@ -18,7 +18,6 @@
     self = [super init];
     if (self)
 	{
-		//_addressAndHostName = [NSMutableDictionary dictionary];
 		[self retrieveIPAndHost];
 	}
     return self;

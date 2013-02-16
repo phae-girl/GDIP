@@ -12,14 +12,9 @@
 @property (weak) IBOutlet NSPopover *popover;
 @property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
 
-
-@property (weak) NSString *hostName, *externalIPAddress, *localIPAddress, *localHostName;
 @property NSMutableDictionary *myDictionary;
 
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
 
-//Delegated Methods
-//- (void)ipAndHostWereSet;
-//- (void)willSetValue: (NSString*)aString;
 @end
