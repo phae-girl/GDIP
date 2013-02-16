@@ -34,7 +34,8 @@
 
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
-	self.myDictionary = [NSDictionary dictionaryWithDictionary:addressesAndHosts];
+	self.myDictionary = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
+	[self.myDictionary setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
 }
 
 //-(void)ipAndHostWereSet
