@@ -1,7 +1,7 @@
 February 15, 2013
 =================
 
-This is the first push of the stable and working project GDIP. GDIP is a status bar app for OS X Mountain Lion built and tested on version 10.8.2. The purpose of the app is to answer the question "What's my GD IP?" without popping open a browser window. This version borrows heavily from the article [A Cocoa application driven by HTTP data][1] by Matt Gallagher at Cocoa with Love. 
+This is the first push of the stable and working project GDIP. GDIP is a status bar app for OS X Mountain Lion built and tested on version 10.8.2. The purpose of the app is to answer the question "What's my GD IP?" without popping open a browser window. This version borrows heavily from the article *[A Cocoa application driven by HTTP data][1]* by Matt Gallagher at Cocoa with Love. 
 
 Please note that there is no pre-built binary. If you want to use this app, you'll need to build it yourself. I'm sure if you're reading this, you have the ability to do that. 
 
