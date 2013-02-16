@@ -9,7 +9,7 @@
 @required
 
 - (void)ipAndHostWereSet;
-- (void)willSetValue: (NSString*)aString;
+- (void)processorDidRetriveAddressesAndHosts: (NSDictionary *)addressesAndHosts;
 
 @end
 
@@ -17,7 +17,7 @@
 
 //- (void)retrieveIPAndHost;
 
-@property (readonly) NSMutableDictionary* addressAndHostName;
+//@property (readonly) 
 @property (weak) id <VWTExternalAddressProcessorDelegate> delegate;
 
 @end
