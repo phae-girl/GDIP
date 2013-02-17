@@ -1,9 +1,32 @@
 Naming Conventions
 ==================
 
-Item				|Key Name for Storage	|TextExpander Snippet	|Checkbox Name (TextExpander xcbx)	|Checkbox State (TextExpander xcbs)
---------------------|-----------------------|-----------------------|-----------------------------------|-----------------------------------|
-External IP Address	|	externalIPAddress	|	xeip				|	externalIPAddressCheckBox		|	externalIPAddressCheckBoxState	|
-External Host Name	|	externalHostName	|	xehn				|	externalHostNameCheckBox		|	externalHostNameCheckBoxState	|
-Local IP Address	|	localIPAddress		|	xlip				|	localIPAddressCheckBox			|	localIPAddressCheckBoxState		|
-Local Host Name		|	localHostName		|	xlhn				|	localHostNameCheckBox			|	localHostNameCheckBoxState		|
+Item				|Key Name for Storage	|TextExpander Snippet	|
+--------------------|-----------------------|-----------------------|
+External IP Address	|	externalIPAddress	|	xeip				|
+External Host Name	|	externalHostName	|	xehn				|
+Local IP Address	|	localIPAddress		|	xlip				|
+Local Host Name		|	localHostName		|	xlhn				|
+
+Declared in: VWTExternalAddressProcessor.m
+Used in :
+
+Checkboxes			|TextExpander xbx				|
+--------------------|-------------------------------|
+External IP Address	|	externalIPAddressCheckBox	|
+External Host Name	|	externalHostNameCheckBox	|
+Local IP Address	|	localIPAddressCheckBox		|
+Local Host Name		|	localHostNameCheckBox		|
+
+Declared in:
+Used in:
+
+Checkbox Status		|TextExpander xbs					|
+--------------------|-----------------------------------|
+External IP Address	|	externalIPAddressCheckBoxState	|
+External Host Name	|	externalHostNameCheckBoxState	|
+Local IP Address	|	localIPAddressCheckBoxState		|
+Local Host Name		|	localHostNameCheckBoxState		|
+
+Declared in:
+Used in
