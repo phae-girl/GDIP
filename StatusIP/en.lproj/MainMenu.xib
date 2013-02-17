@@ -940,19 +940,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">enabled: values.copyButtonEnabled</string>
+						<string key="label">enabled: values.copyButtonState</string>
 						<reference key="source" ref="723305667"/>
 						<reference key="destination" ref="602427524"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="723305667"/>
 							<reference key="NSDestination" ref="602427524"/>
-							<string key="NSLabel">enabled: values.copyButtonEnabled</string>
+							<string key="NSLabel">enabled: values.copyButtonState</string>
 							<string key="NSBinding">enabled</string>
-							<string key="NSKeyPath">values.copyButtonEnabled</string>
+							<string key="NSKeyPath">values.copyButtonState</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">1056</int>
+					<int key="connectionID">1077</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -3151,7 +3151,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1076</int>
+			<int key="maxID">1077</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
