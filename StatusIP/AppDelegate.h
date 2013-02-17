@@ -15,8 +15,8 @@
 
 @property NSMutableDictionary *addressesAndHostsForViews;
 
-- (IBAction)windowQuit:(id)sender;
-- (IBAction)popoverQuit:(id)sender;
+
+- (IBAction)quitApp:(id)sender;
 
 - (IBAction)copyAddressesAndHostsToPasteboard:(id)sender;
 

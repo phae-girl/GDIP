@@ -56,11 +56,8 @@
 	return _tearOffWindow;
 }
 
-- (IBAction)windowQuit:(id)sender {
-	[NSApp terminate:nil];
-}
 
-- (IBAction)popoverQuit:(id)sender {
+- (IBAction)quitApp:(id)sender {
 	[NSApp terminate:nil];
 }
 
