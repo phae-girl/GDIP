@@ -8,15 +8,13 @@
 #import "VWTUserDefaultsManager.h"
 
 @interface AppDelegate() <VWTExternalAddressProcessorDelegate, NSPopoverDelegate>
-@property VWTUserDefaultsManager *defaultsManager;
+@property (nonatomic) VWTUserDefaultsManager *defaultsManager;
+@property (nonatomic) NSStatusItem *statusItem;
+@property (nonatomic) VWTExternalAddressProcessor *addressProccessor;
 
 @end
 
 @implementation AppDelegate
-{
-	NSStatusItem *statusItem;
-	VWTExternalAddressProcessor *addressProccessor;
-}
 
 - (id)init
 {
@@ -30,11 +28,11 @@
 
 - (void)awakeFromNib
 {
-	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-	[statusItem setToolTip:@"Show My IP"];
-	[statusItem setImage:[NSImage imageNamed:@"statusBarGreen"]];
-	[statusItem setHighlightMode:YES];
-	[statusItem setAction:@selector(showPopover:)];
+	_statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+	[self.statusItem setToolTip:@"Show My IP"];
+	[self.statusItem setImage:[NSImage imageNamed:@"statusBarGreen"]];
+	[self.statusItem setHighlightMode:YES];
+	[self.statusItem setAction:@selector(showPopover:)];
 }
 
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
@@ -49,8 +47,8 @@
 	if ([self.tearOffWindow isVisible]) {
 		return;
 	}
-	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
-	[addressProccessor setDelegate:self];
+	_addressProccessor = [[VWTExternalAddressProcessor alloc]init];
+	[self.addressProccessor setDelegate:self];
 	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
 }
 
