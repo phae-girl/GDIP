@@ -818,15 +818,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.externalIPAddress</string>
+						<string key="label">value: addressesAndHostsForViews.externalIPAddress</string>
 						<reference key="source" ref="515400034"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="515400034"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.externalIPAddress</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.externalIPAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.externalIPAddress</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.externalIPAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -834,15 +834,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.externalHostName</string>
+						<string key="label">value: addressesAndHostsForViews.externalHostName</string>
 						<reference key="source" ref="413503026"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="413503026"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.externalHostName</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.externalHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.externalHostName</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.externalHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -858,15 +858,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">title: viewDynamicDataItems.tearoffTitle</string>
+						<string key="label">title: addressesAndHostsForViews.tearoffTitle</string>
 						<reference key="source" ref="144785885"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="144785885"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">title: viewDynamicDataItems.tearoffTitle</string>
+							<string key="NSLabel">title: addressesAndHostsForViews.tearoffTitle</string>
 							<string key="NSBinding">title</string>
-							<string key="NSKeyPath">viewDynamicDataItems.tearoffTitle</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.tearoffTitle</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -874,15 +874,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.externalIPAddress</string>
+						<string key="label">value: addressesAndHostsForViews.externalIPAddress</string>
 						<reference key="source" ref="413639246"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="413639246"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.externalIPAddress</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.externalIPAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.externalIPAddress</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.externalIPAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -890,15 +890,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.externalHostName</string>
+						<string key="label">value: addressesAndHostsForViews.externalHostName</string>
 						<reference key="source" ref="8809700"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="8809700"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.externalHostName</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.externalHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.externalHostName</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.externalHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -922,15 +922,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.localIPAddress</string>
+						<string key="label">value: addressesAndHostsForViews.localIPAddress</string>
 						<reference key="source" ref="948149917"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="948149917"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.localIPAddress</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.localIPAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.localIPAddress</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.localIPAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -938,15 +938,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.localHostName</string>
+						<string key="label">value: addressesAndHostsForViews.localHostName</string>
 						<reference key="source" ref="426320333"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="426320333"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.localHostName</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.localHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.localHostName</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.localHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -954,15 +954,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.localIPAddress</string>
+						<string key="label">value: addressesAndHostsForViews.localIPAddress</string>
 						<reference key="source" ref="113294101"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="113294101"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.localIPAddress</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.localIPAddress</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.localIPAddress</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.localIPAddress</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
@@ -970,15 +970,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: viewDynamicDataItems.localHostName</string>
+						<string key="label">value: addressesAndHostsForViews.localHostName</string>
 						<reference key="source" ref="108433914"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="108433914"/>
 							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: viewDynamicDataItems.localHostName</string>
+							<string key="NSLabel">value: addressesAndHostsForViews.localHostName</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">viewDynamicDataItems.localHostName</string>
+							<string key="NSKeyPath">addressesAndHostsForViews.localHostName</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>

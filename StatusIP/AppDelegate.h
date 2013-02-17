@@ -13,7 +13,7 @@
 @property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
 
 
-@property NSMutableDictionary *viewDynamicDataItems;
+@property NSMutableDictionary *addressesAndHostsForViews;
 
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;

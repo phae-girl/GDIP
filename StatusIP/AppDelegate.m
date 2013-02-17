@@ -37,8 +37,8 @@
 
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
-	self.viewDynamicDataItems = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
-	[self.viewDynamicDataItems setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
+	self.addressesAndHostsForViews = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
+	[self.addressesAndHostsForViews setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
 }
 
 
@@ -70,16 +70,16 @@
 	NSMutableArray *preCopyArray = [NSMutableArray array];
 	NSDictionary *copyableItems = [NSDictionary dictionaryWithDictionary:[self.defaultsManager checkCopyableItems]];
 	if (copyableItems[@"externalIPAddressIsCopyable"]) {
-		[preCopyArray addObject:self.viewDynamicDataItems[@"externalIPAddress"]];
+		[preCopyArray addObject:self.addressesAndHostsForViews[@"externalIPAddress"]];
 	}
 	if (copyableItems[@"externalHostNameIsCopyable"]) {
-		[preCopyArray addObject:self.viewDynamicDataItems[@"externalHostName"]];
+		[preCopyArray addObject:self.addressesAndHostsForViews[@"externalHostName"]];
 	}
 	if (copyableItems[@"localIPAddressIsCopyable"]) {
-		[preCopyArray addObject:self.viewDynamicDataItems[@"localIPAddress"]];
+		[preCopyArray addObject:self.addressesAndHostsForViews[@"localIPAddress"]];
 	}
 	if (copyableItems[@"localHostNameIsCopyable"]) {
-		[preCopyArray addObject:self.viewDynamicDataItems[@"localHostName"]];
+		[preCopyArray addObject:self.addressesAndHostsForViews[@"localHostName"]];
 	}
 	
 	[pasteboard clearContents];
