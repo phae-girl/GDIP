@@ -35,9 +35,9 @@
 {
 	NSMutableDictionary* addressesAndHosts = [NSMutableDictionary dictionary];
 	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:self.responseData encoding:NSUTF8StringEncoding]];
-	[addressesAndHosts setValue:anIP forKey:@"externalAddress"];
+	[addressesAndHosts setValue:anIP forKey:@"externalIPAddress"];
 	[addressesAndHosts setValue:[NSHost hostWithAddress:anIP].name forKey:@"externalHostName"];
-	[addressesAndHosts setValue:[[NSHost currentHost].addresses objectAtIndex:1] forKey:@"localAddress"];
+	[addressesAndHosts setValue:[[NSHost currentHost].addresses objectAtIndex:1] forKey:@"localIPAddress"];
 	[addressesAndHosts setValue:[NSHost currentHost].name forKey:@"localHostName"];
 	[addressesAndHosts setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
 	[self.delegate processorDidRetriveAddressesAndHosts:addressesAndHosts];

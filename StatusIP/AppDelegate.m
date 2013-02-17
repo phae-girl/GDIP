@@ -70,13 +70,13 @@
 	NSMutableArray *preCopyArray = [NSMutableArray array];
 	NSDictionary *copyableItems = [NSDictionary dictionaryWithDictionary:[self.defaultsManager checkCopyableItems]];
 	if (copyableItems[@"externalIP"]) {
-		[preCopyArray addObject:self.viewDynamicDataItems[@"externalAddress"]];
+		[preCopyArray addObject:self.viewDynamicDataItems[@"externalIPAddress"]];
 	}
 	if (copyableItems[@"externalHost"]) {
 		[preCopyArray addObject:self.viewDynamicDataItems[@"externalHostName"]];
 	}
 	if (copyableItems[@"localIP"]) {
-		[preCopyArray addObject:self.viewDynamicDataItems[@"localAddress"]];
+		[preCopyArray addObject:self.viewDynamicDataItems[@"localIPAddress"]];
 	}
 	if (copyableItems[@"localHost"]) {
 		[preCopyArray addObject:self.viewDynamicDataItems[@"localHostName"]];
