@@ -18,6 +18,6 @@
 - (IBAction)windowQuit:(id)sender;
 - (IBAction)popoverQuit:(id)sender;
 
-- (IBAction)copyExternalIPToPasteboard:(id)sender;
+- (IBAction)copyAddressesAndHostsToPasteboard:(id)sender;
 
 @end

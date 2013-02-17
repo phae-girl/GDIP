@@ -64,7 +64,7 @@
 	[NSApp terminate:nil];
 }
 
-- (IBAction)copyExternalIPToPasteboard:(id)sender{
+- (IBAction)copyAddressesAndHostsToPasteboard:(id)sender{
 	
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSMutableArray *preCopyArray = [NSMutableArray array];
