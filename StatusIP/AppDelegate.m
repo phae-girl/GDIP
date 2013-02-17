@@ -5,8 +5,10 @@
 
 
 #import "AppDelegate.h"
+#import "VWTUserDefaultsManager.h"
 
 @interface AppDelegate() <VWTExternalAddressProcessorDelegate, NSPopoverDelegate>
+@property VWTUserDefaultsManager *defaultsManager;
 
 @end
 
@@ -14,6 +16,15 @@
 {
 	NSStatusItem *statusItem;
 	VWTExternalAddressProcessor *addressProccessor;
+}
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _defaultsManager = [[VWTUserDefaultsManager alloc]init];
+    }
+    return self;
 }
 
 
