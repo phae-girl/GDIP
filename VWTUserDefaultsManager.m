@@ -18,11 +18,11 @@
     self = [super init];
     if (self) {
         _userDefaults = [NSUserDefaults standardUserDefaults];
-		[self.userDefaults addObserver:self forKeyPath:@"masterCheckBox" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"externalIPCheckBox" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"externalHostCheckBox" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"localIPCheckBox" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"localHostCheckBox" options:NSKeyValueObservingOptionNew context:NULL];
+		[self.userDefaults addObserver:self forKeyPath:@"masterCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+		[self.userDefaults addObserver:self forKeyPath:@"externalIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+		[self.userDefaults addObserver:self forKeyPath:@"externalHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+		[self.userDefaults addObserver:self forKeyPath:@"localIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+		[self.userDefaults addObserver:self forKeyPath:@"localHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
 		[self verifyCopyButtonStatus];
     }
     return self;
@@ -31,20 +31,20 @@
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if ([keyPath isEqualToString:@"masterCheckBox"] && [change[@"new"] boolValue]) {
-		[self.userDefaults setBool:YES forKey:@"externalIPCheckBox"];
-		[self.userDefaults setBool:YES forKey:@"externalHostCheckBox"];
-		[self.userDefaults setBool:YES forKey:@"localIPCheckBox"];
-		[self.userDefaults setBool:YES forKey:@"localHostCheckBox"];
+	if ([keyPath isEqualToString:@"masterCheckBoxState"] && [change[@"new"] boolValue]) {
+		[self.userDefaults setBool:YES forKey:@"externalIPAddressCheckBoxState"];
+		[self.userDefaults setBool:YES forKey:@"externalHostNameCheckBoxState"];
+		[self.userDefaults setBool:YES forKey:@"localIPAddressCheckBoxState"];
+		[self.userDefaults setBool:YES forKey:@"localHostNameCheckBoxState"];
 		
 	}
-	if ([keyPath isEqualToString:@"externalIPCheckBox"] |
-		[keyPath isEqualToString:@"externalHostCheckBox"] |
-		[keyPath isEqualToString:@"localIPCheckBox"] |
-		[keyPath isEqualToString:@"localHostCheckBox"] &&
+	if ([keyPath isEqualToString:@"externalIPAddressCheckBoxState"] |
+		[keyPath isEqualToString:@"externalHostNameCheckBoxState"] |
+		[keyPath isEqualToString:@"localIPAddressCheckBoxState"] |
+		[keyPath isEqualToString:@"localHostNameCheckBoxState"] &&
 		![change[@"new"] boolValue])
 	{
-		[self.userDefaults setBool:NO forKey:@"masterCheckBox"];
+		[self.userDefaults setBool:NO forKey:@"masterCheckBoxState"];
 	}
 	
 	[self verifyCopyButtonStatus];
@@ -52,16 +52,16 @@
 
 - (void)verifyCopyButtonStatus
 {
-	if ([self.userDefaults boolForKey:@"externalIPCheckBox"] |
-		[self.userDefaults boolForKey:@"externalHostCheckBox"] |
-		[self.userDefaults boolForKey:@"localIPCheckBox"] |
-		[self.userDefaults boolForKey:@"localHostCheckBox"])
+	if ([self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"] |
+		[self.userDefaults boolForKey:@"externalHostNameCheckBoxState"] |
+		[self.userDefaults boolForKey:@"localIPAddressCheckBoxState"] |
+		[self.userDefaults boolForKey:@"localHostNameCheckBoxState"])
 	{
-		[self.userDefaults setBool:YES forKey:@"copyButtonEnabled"];
+		[self.userDefaults setBool:YES forKey:@"copyButtonState"];
 	}
 	else
 	{
-		[self.userDefaults setBool:NO forKey:@"copyButtonEnabled"];
+		[self.userDefaults setBool:NO forKey:@"copyButtonState"];
 	}
 
 }
@@ -70,17 +70,17 @@
 {
 	NSMutableDictionary *copyableItems = [NSMutableDictionary dictionary];
 	
-	if ([self.userDefaults boolForKey:@"externalIPCheckBox"]) {
-		copyableItems[@"externalIP"] = @YES;
+	if ([self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"]) {
+		copyableItems[@"externalIPAddressIsCopyable"] = @YES;
 	}
-	if ([self.userDefaults boolForKey:@"externalHostCheckBox"]) {
-		copyableItems[@"externalHost"] = @YES;
+	if ([self.userDefaults boolForKey:@"externalHostNameCheckBoxState"]) {
+		copyableItems[@"externalHostNameIsCopyable"] = @YES;
 	}
-	if ([self.userDefaults boolForKey:@"localIPCheckBox"]) {
-		copyableItems[@"localIP"] = @YES;
+	if ([self.userDefaults boolForKey:@"localIPAddressCheckBoxState"]) {
+		copyableItems[@"localIPAddressIsCopyable"] = @YES;
 	}
-	if ([self.userDefaults boolForKey:@"localHostCheckBox"]) {
-		copyableItems[@"localHost"] = @YES;
+	if ([self.userDefaults boolForKey:@"localHostNameCheckBoxState"]) {
+		copyableItems[@"localHostNameIsCopyable"] = @YES;
 	}
 	return copyableItems;
 	
