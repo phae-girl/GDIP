@@ -50,7 +50,6 @@
 	}
 	
 	[self verifyCopyButtonStatus];
-		
 }
 
 - (void)verifyCopyButtonStatus
@@ -67,6 +66,26 @@
 		[self.userDefaults setBool:NO forKey:@"copyButtonEnabled"];
 	}
 
+}
+
+- (NSDictionary *)checkCopyableItems
+{
+	NSMutableDictionary *copyableItems = [NSMutableDictionary dictionary];
+	
+	if ([self.userDefaults boolForKey:@"externalIPCheckBox"]) {
+		copyableItems[@"externalIP"] = @YES;
+	}
+	if ([self.userDefaults boolForKey:@"externalHostCheckBox"]) {
+		copyableItems[@"externalHost"] = @YES;
+	}
+	if ([self.userDefaults boolForKey:@"localIPCheckBox"]) {
+		copyableItems[@"localIP"] = @YES;
+	}
+	if ([self.userDefaults boolForKey:@"localHostCheckBox"]) {
+		copyableItems[@"localHost"] = @YES;
+	}
+	return copyableItems;
+	
 }
 
 @end

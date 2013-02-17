@@ -11,5 +11,6 @@
 
 @interface VWTUserDefaultsManager : NSObject
 
+- (NSDictionary *)checkCopyableItems;
 
 @end

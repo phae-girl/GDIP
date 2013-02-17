@@ -65,9 +65,24 @@
 
 - (IBAction)copyExternalIPToPasteboard:(id)sender{
 	
-	NSPasteboard *pb = [NSPasteboard generalPasteboard];
-	[pb clearContents];
-	[pb writeObjects:[NSArray arrayWithObjects:[self.viewDynamicDataItems valueForKey:@"externalAddress"], nil]];
+	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+	NSMutableArray *preCopyArray = [NSMutableArray array];
+	NSDictionary *copyableItems = [NSDictionary dictionaryWithDictionary:[self.defaultsManager checkCopyableItems]];
+	if (copyableItems[@"externalIP"]) {
+		[preCopyArray addObject:self.viewDynamicDataItems[@"externalAddress"]];
+	}
+	if (copyableItems[@"externalHost"]) {
+		[preCopyArray addObject:self.viewDynamicDataItems[@"externalHostName"]];
+	}
+	if (copyableItems[@"localIP"]) {
+		[preCopyArray addObject:self.viewDynamicDataItems[@"localAddress"]];
+	}
+	if (copyableItems[@"localHost"]) {
+		[preCopyArray addObject:self.viewDynamicDataItems[@"localHostName"]];
+	}
+	
+	[pasteboard clearContents];
+	[pasteboard writeObjects:@[[preCopyArray componentsJoinedByString:@"\n"]]];
 	
 }
 
