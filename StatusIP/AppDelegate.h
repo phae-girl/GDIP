@@ -12,6 +12,7 @@
 @property (weak) IBOutlet NSPopover *popover;
 @property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
 
+
 @property NSMutableDictionary *viewDynamicDataItems;
 
 - (IBAction)windowQuit:(id)sender;

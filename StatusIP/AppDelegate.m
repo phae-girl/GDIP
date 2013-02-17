@@ -43,9 +43,6 @@
 	[self.viewDynamicDataItems setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
 }
 
-- (void)willSetValue: (NSString*)aString {
-	NSLog(@"This is the string:%@", aString);
-}
 
 - (void)showPopover:(id)sender
 {
