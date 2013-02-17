@@ -46,6 +46,9 @@
 
 - (void)showPopover:(id)sender
 {
+	if ([self.tearOffWindow isVisible]) {
+		return;
+	}
 	addressProccessor = [[VWTExternalAddressProcessor alloc]init];
 	[addressProccessor setDelegate:self];
 	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
