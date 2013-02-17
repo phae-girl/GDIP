@@ -1,0 +1,9 @@
+Naming Conventions
+==================
+
+Item				|Key Name for Storage	|TextExpander Snippet	|Checkbox Name (TextExpander xcbx)	|Checkbox State (TextExpander xcbs)
+--------------------|-----------------------|-----------------------|-----------------------------------|-----------------------------------|
+External IP Address	|	externalIPAddress	|	xeip				|	externalIPAddressCheckBox		|	externalIPAddressCheckBoxState	|
+External Host Name	|	externalHostName	|	xehn				|	externalHostNameCheckBox		|	externalHostNameCheckBoxState	|
+Local IP Address	|	localIPAddress		|	xlip				|	localIPAddressCheckBox			|	localIPAddressCheckBoxState		|
+Local Host Name		|	localHostName		|	xlhn				|	localHostNameCheckBox			|	localHostNameCheckBoxState		|
