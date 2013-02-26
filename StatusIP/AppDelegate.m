@@ -6,6 +6,7 @@
 
 #import "AppDelegate.h"
 #import "VWTUserDefaultsManager.h"
+#import "VWTAnimatedView.h"
 
 @interface AppDelegate() <VWTExternalAddressProcessorDelegate, NSPopoverDelegate>
 @property (nonatomic) VWTUserDefaultsManager *defaultsManager;
