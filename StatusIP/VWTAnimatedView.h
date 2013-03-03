@@ -10,4 +10,6 @@
 
 @interface VWTAnimatedView : NSView
 
+- (void)drawText:(NSString *)labelText withSlideInAnimation:(BOOL)animation;
+
 @end
