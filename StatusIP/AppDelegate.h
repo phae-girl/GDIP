@@ -5,20 +5,20 @@
 
 
 #import <Cocoa/Cocoa.h>
-#import "VWTExternalAddressProcessor.h"
 
 @class VWTAnimatedView;
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (weak) IBOutlet NSPopover *popover;
-@property (unsafe_unretained) IBOutlet NSWindow *tearOffWindow;
 @property (weak) IBOutlet VWTAnimatedView *externalIPAddressView, *externalHostNameView, *localIPAddressView, *localHostNameView;
+@property (unsafe_unretained) IBOutlet NSWindow *someWindow;
+@property NSWindowController *myWindow;
 
 @property NSMutableDictionary *addressesAndHostsForViews;
 
-
-- (IBAction)quitApp:(id)sender;
-
 - (IBAction)copyAddressesAndHostsToPasteboard:(id)sender;
+- (IBAction)quitApp:(id)sender;
+- (IBAction)refreshData:(id)sender;
+- (IBAction)showPreferences:(id)sender;
 
 @end

@@ -14,6 +14,6 @@
 
 @interface VWTExternalAddressProcessor : NSObject <NSURLConnectionDelegate>
 
-@property (weak) id <VWTExternalAddressProcessorDelegate> delegate;
+@property (assign, nonatomic) id <VWTExternalAddressProcessorDelegate> delegate;
 
 @end

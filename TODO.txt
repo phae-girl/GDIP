@@ -1,0 +1,3 @@
+- Add custom animated views to popover @done
+- Set up Refresh action
+- Set up Settings panel

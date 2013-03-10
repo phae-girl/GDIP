@@ -5,13 +5,12 @@
 #import "VWTExternalAddressProcessor.h"
 
 @interface VWTExternalAddressProcessor ()
-@property (nonatomic) NSURLConnection *connexion;
 @property (nonatomic) NSMutableData *responseData;
+@property (nonatomic) NSURLConnection *connexion;
 
 @end
 
 @implementation VWTExternalAddressProcessor
-
 
 - (id)init
 {
@@ -37,7 +36,7 @@
 	NSString *anIP = [self parseIPAddress:[[NSString alloc]initWithData:self.responseData encoding:NSUTF8StringEncoding]];
 	[addressesAndHosts setValue:anIP forKey:@"externalIPAddress"];
 	[addressesAndHosts setValue:[NSHost hostWithAddress:anIP].name forKey:@"externalHostName"];
-	[addressesAndHosts setValue:[[NSHost currentHost].addresses objectAtIndex:1] forKey:@"localIPAddress"];
+	[addressesAndHosts setValue:([NSHost currentHost].addresses)[1] forKey:@"localIPAddress"];
 	[addressesAndHosts setValue:[NSHost currentHost].name forKey:@"localHostName"];
 	[addressesAndHosts setValue:[NSHost currentHost].localizedName forKey:@"localizedName"];
 	[self.delegate processorDidRetriveAddressesAndHosts:addressesAndHosts];
@@ -68,12 +67,12 @@
 		
 	}
 	
-	if (![[arrayOfMatchStrings objectAtIndex:0] isKindOfClass:[NSString class]])
+	if (![arrayOfMatchStrings[0] isKindOfClass:[NSString class]])
 	{
 		[NSAlert alertWithMessageText:@"Something's Wrong!" defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@"There was an error processing the response from http://checkip.dyndns.com. Verify that the site is actually up and running."];
 		return @"0.0.0.0";
 	}
-	return [arrayOfMatchStrings objectAtIndex:0];
+	return arrayOfMatchStrings[0];
 }
 
 

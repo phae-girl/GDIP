@@ -12,6 +12,11 @@ February 17, 2013
 
 There have been a bunch of changes since the first push. The most notable is the addition of the ability to select and copy addresses and host names (without highlighting and right clicking). There has also been some refactoring and tuning in the code thanks to the feedback from some nice folks over on the [NS Brief][3] Glassboard. If you're looking for some Cocoa in your ears, stop by and check out their podcast.
 
+March 10, 2013
+==============
+
+I changed the way the addresses are displayed from a straight label to a view that has them slide in from the right. My thinking is that it will give the user some indication that stuff is happening when they click on refresh. Don't worry, there will be a switch in the settings to turn that off. I also abandoned the idea of using a tear-off window to provide extra controls. Using the tear-off window made the popover behave in a weird way that I couldn't figure out. I suppose I could add stuff in the settings panel to remove controls for those who want a slimmed down look. 
+
 Licensing
 =========
 

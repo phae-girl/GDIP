@@ -8,8 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol VWTAnimatedViewDelegate <NSObject>
+@required
+//Required methods for implementing the delegate
+
+@optional
+//Optional methods for implementing the delegate
+- (void)animationDidCompleteForView:(int)viewName;
+
+@end
+
 @interface VWTAnimatedView : NSView
 
-- (void)drawText:(NSString *)labelText withSlideInAnimation:(BOOL)animation;
+@property (assign, nonatomic) id <VWTAnimatedViewDelegate> delegate;
+
+- (void)drawText:(NSString *)labelText withSlideInAnimation:(BOOL)animation forView:(int)viewName;
 
 @end

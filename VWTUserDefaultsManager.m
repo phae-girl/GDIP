@@ -28,7 +28,6 @@
     return self;
 }
 
-
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 	if ([keyPath isEqualToString:@"masterCheckBoxState"] && [change[@"new"] boolValue]) {
@@ -46,7 +45,6 @@
 	{
 		[self.userDefaults setBool:NO forKey:@"masterCheckBoxState"];
 	}
-	
 	[self verifyCopyButtonStatus];
 }
 
@@ -63,7 +61,6 @@
 	{
 		[self.userDefaults setBool:NO forKey:@"copyButtonState"];
 	}
-
 }
 
 - (NSDictionary *)checkCopyableItems
@@ -83,7 +80,6 @@
 		copyableItems[@"localHostNameIsCopyable"] = @YES;
 	}
 	return copyableItems;
-	
 }
 
 @end

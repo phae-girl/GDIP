@@ -3,17 +3,26 @@
 //
 //  Created by Phaedra Deepsky on 2012-11-24.
 
-
 #import "AppDelegate.h"
-#import "VWTUserDefaultsManager.h"
 #import "VWTAnimatedView.h"
+#import "VWTExternalAddressProcessor.h"
+#import "VWTUserDefaultsManager.h"
 
-@interface AppDelegate() <VWTExternalAddressProcessorDelegate, NSPopoverDelegate>
-@property (nonatomic) VWTUserDefaultsManager *defaultsManager;
+@interface AppDelegate() <NSPopoverDelegate, VWTAnimatedViewDelegate,VWTExternalAddressProcessorDelegate>
+
 @property (nonatomic) NSStatusItem *statusItem;
 @property (nonatomic) VWTExternalAddressProcessor *addressProccessor;
+@property (nonatomic) VWTUserDefaultsManager *defaultsManager;
 
 @end
+
+typedef enum ViewName : int {
+	externalIPAddressView,
+	externalHostNameView,
+	localIPAddressView,
+	localHostNameView
+	
+} ViewName;
 
 @implementation AppDelegate
 
@@ -25,7 +34,6 @@
     }
     return self;
 }
-
 
 - (void)awakeFromNib
 {
@@ -39,24 +47,44 @@
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
 	self.addressesAndHostsForViews = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
-	[self.addressesAndHostsForViews setValue:[[NSArray arrayWithObjects:@"Hosts and IP Addresses for",[addressesAndHosts valueForKey:@"localizedName"], nil] componentsJoinedByString:@" " ] forKey:@"tearoffTitle"];
-}
-
+	[self.externalIPAddressView setDelegate:self];
+	[self.externalIPAddressView drawText:[self.addressesAndHostsForViews valueForKey:@"externalIPAddress"] withSlideInAnimation:YES forView:externalIPAddressView];
+	}
 
 - (void)showPopover:(id)sender
 {
-	if ([self.tearOffWindow isVisible]) {
-		return;
-	}
 	_addressProccessor = [[VWTExternalAddressProcessor alloc]init];
 	[self.addressProccessor setDelegate:self];
-	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMaxYEdge];
+	[_popover showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+	[self.popover setDelegate:self];
 }
 
-- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover {
-	return _tearOffWindow;
+- (void)animationDidCompleteForView:(int)viewName
+{
+		switch (viewName) {
+		case externalIPAddressView:
+			[self.externalHostNameView drawText:[self.addressesAndHostsForViews valueForKey:@"externalHostName"] withSlideInAnimation:YES forView:externalHostNameView];
+			[self.externalHostNameView setDelegate:self];
+			break;
+		case externalHostNameView:
+			[self.localIPAddressView drawText:[self.addressesAndHostsForViews valueForKey:@"localIPAddress"] withSlideInAnimation:YES forView:localIPAddressView];
+			[self.localIPAddressView setDelegate:self];
+			break;
+		case localIPAddressView:
+			[self.localHostNameView drawText:[self.addressesAndHostsForViews valueForKey:@"localHostName"] withSlideInAnimation:YES forView:localHostNameView];
+			break;
+		default:
+			break;
+	}
 }
 
+-(void)popoverDidClose:(NSNotification *)notification
+{
+	[self.externalIPAddressView drawText:@"" withSlideInAnimation:NO forView:externalIPAddressView];
+	[self.externalHostNameView drawText:@"" withSlideInAnimation:NO forView:externalHostNameView];
+	[self.localIPAddressView drawText:@"" withSlideInAnimation:NO forView:localIPAddressView];
+	[self.localHostNameView drawText:@"" withSlideInAnimation:NO forView:localHostNameView];
+}
 
 - (IBAction)quitApp:(id)sender {
 	[NSApp terminate:nil];
@@ -82,9 +110,14 @@
 	
 	[pasteboard clearContents];
 	[pasteboard writeObjects:@[[preCopyArray componentsJoinedByString:@"\n"]]];
-	
 }
 
+- (IBAction)refreshData:(id)sender {
+	//TODO: Implement Refresh System
+}
 
-
+- (IBAction)showPreferences:(id)sender
+{
+	//TODO: Set up Preferences Panel
+}
 @end

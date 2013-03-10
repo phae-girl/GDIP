@@ -9,12 +9,13 @@
 #import "VWTAnimatedView.h"
 
 @interface VWTAnimatedView ()
+
 @property NSMutableDictionary *textAttributes;
 @property NSPoint textInsertionPoint;
-@property NSTimer *scroller, *colorFader;
-@property float redValue, greenValue, blueValue, alphaValue;
 @property NSString *textToBeDispalyed;
-
+@property NSTimer *scroller, *colorFader;
+@property float redValue, greenValue, blueValue, alphaValue, timerLength;
+@property int currentView;
 
 @end
 
@@ -22,28 +23,29 @@
 
 - (id)initWithFrame:(NSRect)frame
 {
-	NSLog(@"%s [Line %d] ", __PRETTY_FUNCTION__, __LINE__);
     self = [super initWithFrame:frame];
     if (self) {
         _redValue = 0.0f;
 		_greenValue = 0.0f;
 		_blueValue = 0.0f;
-		_alphaValue = 0.0f;
+		_alphaValue = 1.0f;
 		_textAttributes = [NSMutableDictionary dictionaryWithDictionary:@{NSForegroundColorAttributeName: [NSColor colorWithCalibratedRed:_redValue green:_greenValue blue:_blueValue alpha:_alphaValue], NSFontAttributeName: [NSFont systemFontOfSize:13]}];
     }
     
     return self;
 }
 
-- (void)drawText:(NSString *)labelText withSlideInAnimation:(BOOL)animation
+- (void)drawText:(NSString *)labelText withSlideInAnimation:(BOOL)animation forView:(int)viewName
 {
-	NSLog(@"%s [Line %d] ", __PRETTY_FUNCTION__, __LINE__);
+	
+	self.currentView = viewName;
 	self.textToBeDispalyed = labelText;
 	_textInsertionPoint.y = (self.bounds.size.height/2 - [labelText sizeWithAttributes:self.textAttributes].height/2);
 	
 	if (animation) {
 		_textInsertionPoint.x = -[labelText sizeWithAttributes:self.textAttributes].width;
-		self.scroller = [NSTimer scheduledTimerWithTimeInterval:0.001
+		_timerLength = (1/[labelText sizeWithAttributes:self.textAttributes].height)*0.03;
+		self.scroller = [NSTimer scheduledTimerWithTimeInterval:self.timerLength
 														 target:self
 													   selector:@selector(moveText:)
 													   userInfo:nil repeats:YES];
@@ -60,6 +62,7 @@
 		_textInsertionPoint.x = 0.0f;
 		[self.scroller invalidate];
 		self.scroller = nil;
+		[self.delegate animationDidCompleteForView:self.currentView];
 	}
 	
 	_textInsertionPoint.x += 1.0f;
@@ -68,7 +71,6 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    NSLog(@"%s [Line %d] ", __PRETTY_FUNCTION__, __LINE__);
 	[self.textToBeDispalyed drawAtPoint:self.textInsertionPoint withAttributes:self.textAttributes];
 }
 
