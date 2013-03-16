@@ -38,9 +38,8 @@
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
 	self.addressesAndHostsForViews = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
-//	[self.externalIPAddressView setDelegate:self];
-//	[self.externalIPAddressView drawText:[self.addressesAndHostsForViews valueForKey:@"externalIPAddress"] withSlideInAnimation:YES forView:externalIPAddressView];
-	}
+	[self hideAddressAndHostLabels];
+}
 
 - (void)showPopover:(id)sender
 {
@@ -50,8 +49,32 @@
 	[self.popover setDelegate:self];
 }
 
+- (void)popoverDidShow:(NSNotification *)notification
+{
+	[self slideInAddressAndHostLabels];
+}
 - (IBAction)quitApp:(id)sender {
 	[NSApp terminate:nil];
+}
+
+- (void)hideAddressAndHostLabels
+{
+	[self.externalIPAddressLabel setFrameOrigin:NSMakePoint(-self.externalIPAddressLabel.frame.size.width, self.externalIPAddressLabel.frame.origin.y)];
+	[self.externalHostNameLabel setFrameOrigin:NSMakePoint(-self.externalHostNameLabel.frame.size.width, self.externalHostNameLabel.frame.origin.y)];
+	[self.localIPAddressLabel setFrameOrigin:NSMakePoint(-self.localIPAddressLabel.frame.size.width, self.localIPAddressLabel.frame.origin.y)];
+	[self.localHostNameLabel setFrameOrigin:NSMakePoint(-self.localHostNameLabel.frame.size.width, self.localHostNameLabel.frame.origin.y)];
+
+}
+
+- (void)slideInAddressAndHostLabels
+{
+	[NSAnimationContext beginGrouping];
+	[[NSAnimationContext currentContext] setDuration:0.5f];
+	[[self.externalIPAddressLabel animator] setFrameOrigin:NSMakePoint(0, self.externalIPAddressLabel.frame.origin.y)];
+	[[self.externalHostNameLabel animator ] setFrameOrigin:NSMakePoint(0, self.externalHostNameLabel.frame.origin.y)];
+	[[self.localIPAddressLabel animator] setFrameOrigin:NSMakePoint(0, self.localIPAddressLabel.frame.origin.y)];
+	[[self.localHostNameLabel animator] setFrameOrigin:NSMakePoint(0, self.localHostNameLabel.frame.origin.y)];
+	[NSAnimationContext endGrouping];
 }
 
 - (IBAction)copyAddressesAndHostsToPasteboard:(id)sender{
@@ -77,7 +100,9 @@
 }
 
 - (IBAction)refreshData:(id)sender {
+	[self hideAddressAndHostLabels];
 	//TODO: Implement Refresh System
+	[self slideInAddressAndHostLabels];
 }
 
 - (IBAction)showPreferences:(id)sender
