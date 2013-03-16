@@ -17,6 +17,11 @@ March 10, 2013
 
 I changed the way the addresses are displayed from a straight label to a view that has them slide in from the right. My thinking is that it will give the user some indication that stuff is happening when they click on refresh. Don't worry, there will be a switch in the settings to turn that off. I also abandoned the idea of using a tear-off window to provide extra controls. Using the tear-off window made the popover behave in a weird way that I couldn't figure out. I suppose I could add stuff in the settings panel to remove controls for those who want a slimmed down look. 
 
+March 15, 2013
+==============
+
+Ditched the whole AnimatedViews class and all the associated code that went with it in favour of Core Animation effects. These are much smoother in my optinion and reduced the quantity of code significantly. Still haven't put in a way to turn it off yet. 
+
 Licensing
 =========
 

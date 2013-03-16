@@ -12,7 +12,7 @@
 @property (weak) IBOutlet NSPopover *popover;
 @property (weak) IBOutlet NSTextField *externalIPAddressLabel, *externalHostNameLabel, *localIPAddressLabel, *localHostNameLabel;
 @property (weak) IBOutlet NSView *externalIPAddressView, *externalHostNameView, *localIPAddressView, *localHostNameView;
-@property NSWindowController *myWindow;
+
 
 
 @property NSMutableDictionary *addressesAndHostsForViews;
