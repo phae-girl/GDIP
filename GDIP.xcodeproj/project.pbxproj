@@ -15,6 +15,7 @@
 		9100D318166091080002AC7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100D316166091080002AC7A /* MainMenu.xib */; };
 		911EF41216DD24EF00B7BC85 /* VWTAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EF41116DD24EF00B7BC85 /* VWTAnimatedView.m */; };
 		912CE27616EC599100C45DA2 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 912CE27516EC599100C45DA2 /* TODO.txt */; };
+		915F77F516EDBD5E0092D190 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 915F77F416EDBD5E0092D190 /* README.md */; };
 		918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */; };
 		919AB57B16CF2C280075B2AC /* icons.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 919AB57816CF2C280075B2AC /* icons.iconset */; };
 		919AB57C16CF2C280075B2AC /* statusBarGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 919AB57916CF2C280075B2AC /* statusBarGreen.png */; };
@@ -39,6 +40,7 @@
 		911EF41016DD24EF00B7BC85 /* VWTAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWTAnimatedView.h; sourceTree = "<group>"; };
 		911EF41116DD24EF00B7BC85 /* VWTAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWTAnimatedView.m; sourceTree = "<group>"; };
 		912CE27516EC599100C45DA2 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		915F77F416EDBD5E0092D190 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWTExternalAddressProcessor.h; sourceTree = "<group>"; };
 		918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWTExternalAddressProcessor.m; sourceTree = "<group>"; };
 		919AB57816CF2C280075B2AC /* icons.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icons.iconset; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 		91DF23C716D0832A0074FD66 /* VWTUserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWTUserDefaultsManager.h; path = ../VWTUserDefaultsManager.h; sourceTree = "<group>"; };
 		91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWTUserDefaultsManager.m; path = ../VWTUserDefaultsManager.m; sourceTree = "<group>"; };
 		91DF23CC16D0AF3C0074FD66 /* Dev Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Dev Notes.txt"; sourceTree = "<group>"; };
-		91DF23CD16D0C64E0074FD66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 		9100D2F2166091070002AC7A = {
 			isa = PBXGroup;
 			children = (
+				915F77F416EDBD5E0092D190 /* README.md */,
 				912CE27516EC599100C45DA2 /* TODO.txt */,
 				91DF23CC16D0AF3C0074FD66 /* Dev Notes.txt */,
 				9100D307166091070002AC7A /* GDIP */,
@@ -111,7 +113,6 @@
 				918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */,
 				911EF41016DD24EF00B7BC85 /* VWTAnimatedView.h */,
 				911EF41116DD24EF00B7BC85 /* VWTAnimatedView.m */,
-				91DF23CD16D0C64E0074FD66 /* README.md */,
 				919AB57E16CF2C930075B2AC /* StatusBarIcons */,
 				9100D308166091070002AC7A /* Supporting Files */,
 			);
@@ -201,6 +202,7 @@
 				919AB57C16CF2C280075B2AC /* statusBarGreen.png in Resources */,
 				919AB57D16CF2C280075B2AC /* statusBarRed.png in Resources */,
 				912CE27616EC599100C45DA2 /* TODO.txt in Resources */,
+				915F77F516EDBD5E0092D190 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
