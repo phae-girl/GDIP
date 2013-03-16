@@ -13,7 +13,6 @@
 		9100D312166091070002AC7A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9100D310166091070002AC7A /* Credits.rtf */; };
 		9100D315166091070002AC7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100D314166091070002AC7A /* AppDelegate.m */; };
 		9100D318166091080002AC7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100D316166091080002AC7A /* MainMenu.xib */; };
-		911EF41216DD24EF00B7BC85 /* VWTAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 911EF41116DD24EF00B7BC85 /* VWTAnimatedView.m */; };
 		912CE27616EC599100C45DA2 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 912CE27516EC599100C45DA2 /* TODO.txt */; };
 		915F77F516EDBD5E0092D190 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 915F77F416EDBD5E0092D190 /* README.md */; };
 		918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */; };
@@ -37,8 +36,6 @@
 		9100D313166091070002AC7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9100D314166091070002AC7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9100D317166091080002AC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		911EF41016DD24EF00B7BC85 /* VWTAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWTAnimatedView.h; sourceTree = "<group>"; };
-		911EF41116DD24EF00B7BC85 /* VWTAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWTAnimatedView.m; sourceTree = "<group>"; };
 		912CE27516EC599100C45DA2 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		915F77F416EDBD5E0092D190 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWTExternalAddressProcessor.h; sourceTree = "<group>"; };
@@ -111,8 +108,6 @@
 				91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */,
 				918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */,
 				918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */,
-				911EF41016DD24EF00B7BC85 /* VWTAnimatedView.h */,
-				911EF41116DD24EF00B7BC85 /* VWTAnimatedView.m */,
 				919AB57E16CF2C930075B2AC /* StatusBarIcons */,
 				9100D308166091070002AC7A /* Supporting Files */,
 			);
@@ -217,7 +212,6 @@
 				9100D315166091070002AC7A /* AppDelegate.m in Sources */,
 				918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */,
 				91DF23C916D0832A0074FD66 /* VWTUserDefaultsManager.m in Sources */,
-				911EF41216DD24EF00B7BC85 /* VWTAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

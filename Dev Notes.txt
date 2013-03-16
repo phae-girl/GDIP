@@ -37,9 +37,3 @@ External IP Address	|	externalIPAddressIsCopyable		|
 External Host Name	|	externalHostNameIsCopyable		|
 Local IP Address	|	localIPAddressIsCopyable		|
 Local Host Name		|	localHostNameIsCopyable			|
-
-
-99.240.221.35
-cpe90840de80f18-cm185933410cfe.cpe.net.cable.rogers.com
-10.0.185.6
-phaedra-deepskys-imac.local
