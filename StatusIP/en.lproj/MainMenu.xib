@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">3084</string>
@@ -352,7 +352,7 @@
 					</object>
 					<object class="NSButton" id="134786689">
 						<reference key="NSNextResponder" ref="122421760"/>
-						<int key="NSvFlags">268</int>
+						<int key="NSvFlags">-2147483380</int>
 						<string key="NSFrame">{{111, 13}, {113, 32}}</string>
 						<reference key="NSSuperview" ref="122421760"/>
 						<reference key="NSWindow"/>
@@ -360,7 +360,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="406865472">
-							<int key="NSCellFlags">67108864</int>
+							<int key="NSCellFlags">603979776</int>
 							<int key="NSCellFlags2">134217728</int>
 							<string key="NSContents">Preferences</string>
 							<reference key="NSSupport" ref="261809604"/>
@@ -377,7 +377,7 @@
 					</object>
 					<object class="NSButton" id="607107405">
 						<reference key="NSNextResponder" ref="122421760"/>
-						<int key="NSvFlags">268</int>
+						<int key="NSvFlags">-2147483380</int>
 						<string key="NSFrame">{{14, 13}, {88, 32}}</string>
 						<reference key="NSSuperview" ref="122421760"/>
 						<reference key="NSWindow"/>
@@ -385,7 +385,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="793905866">
-							<int key="NSCellFlags">67108864</int>
+							<int key="NSCellFlags">603979776</int>
 							<int key="NSCellFlags2">134217728</int>
 							<string key="NSContents">Refresh</string>
 							<reference key="NSSupport" ref="261809604"/>
@@ -432,7 +432,6 @@
 						<string key="NSFrame">{{658, 13}, {128, 32}}</string>
 						<reference key="NSSuperview" ref="122421760"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="716967817">
@@ -2715,14 +2714,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">VWTAnimatedView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/VWTAnimatedView.h</string>
 					</object>
 				</object>
 			</array>
