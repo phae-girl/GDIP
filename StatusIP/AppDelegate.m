@@ -6,14 +6,14 @@
 #import "AppDelegate.h"
 #import "VWTExternalAddressProcessor.h"
 #import "VWTUserDefaultsManager.h"
+#import "NSArray+Iterator.h"
 
 @interface AppDelegate() <NSPopoverDelegate, VWTExternalAddressProcessorDelegate>
 @property (nonatomic) NSStatusItem *statusItem;
 @property (nonatomic) VWTExternalAddressProcessor *addressProccessor;
 @property (nonatomic) VWTUserDefaultsManager *defaultsManager;
-
+@property (nonatomic) NSArray *addressLabels;
 @end
-
 
 @implementation AppDelegate
 
@@ -28,6 +28,7 @@
 
 - (void)awakeFromNib
 {
+	_addressLabels = @[self.externalIPAddressLabel, self.externalHostNameLabel, self.localIPAddressLabel, self.localHostNameLabel];
 	_statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	[self.statusItem setToolTip:@"Show My IP"];
 	[self.statusItem setImage:[NSImage imageNamed:@"statusBarGreen"]];
@@ -59,21 +60,14 @@
 
 - (void)hideAddressAndHostLabels
 {
-	[self.externalIPAddressLabel setFrameOrigin:NSMakePoint(-self.externalIPAddressLabel.frame.size.width, self.externalIPAddressLabel.frame.origin.y)];
-	[self.externalHostNameLabel setFrameOrigin:NSMakePoint(-self.externalHostNameLabel.frame.size.width, self.externalHostNameLabel.frame.origin.y)];
-	[self.localIPAddressLabel setFrameOrigin:NSMakePoint(-self.localIPAddressLabel.frame.size.width, self.localIPAddressLabel.frame.origin.y)];
-	[self.localHostNameLabel setFrameOrigin:NSMakePoint(-self.localHostNameLabel.frame.size.width, self.localHostNameLabel.frame.origin.y)];
-
+	[self.addressLabels each:^(NSTextField *label){[label setFrameOrigin:NSMakePoint(-label.frame.size.width, label.frame.origin.y)];}];
 }
 
 - (void)slideInAddressAndHostLabels
 {
 	[NSAnimationContext beginGrouping];
 	[[NSAnimationContext currentContext] setDuration:0.5f];
-	[[self.externalIPAddressLabel animator] setFrameOrigin:NSMakePoint(0, self.externalIPAddressLabel.frame.origin.y)];
-	[[self.externalHostNameLabel animator ] setFrameOrigin:NSMakePoint(0, self.externalHostNameLabel.frame.origin.y)];
-	[[self.localIPAddressLabel animator] setFrameOrigin:NSMakePoint(0, self.localIPAddressLabel.frame.origin.y)];
-	[[self.localHostNameLabel animator] setFrameOrigin:NSMakePoint(0, self.localHostNameLabel.frame.origin.y)];
+	[self.addressLabels each:^(NSTextField *label){[[label animator] setFrameOrigin:NSMakePoint(0, label.frame.origin.y)];}];
 	[NSAnimationContext endGrouping];
 }
 

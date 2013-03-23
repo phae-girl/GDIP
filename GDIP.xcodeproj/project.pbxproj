@@ -20,6 +20,7 @@
 		919AB57C16CF2C280075B2AC /* statusBarGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 919AB57916CF2C280075B2AC /* statusBarGreen.png */; };
 		919AB57D16CF2C280075B2AC /* statusBarRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 919AB57A16CF2C280075B2AC /* statusBarRed.png */; };
 		91DF23C916D0832A0074FD66 /* VWTUserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */; };
+		EDB4A7F816FD5766001274B7 /* NSArray+Iterator.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB4A7F716FD5766001274B7 /* NSArray+Iterator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		91DF23C716D0832A0074FD66 /* VWTUserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWTUserDefaultsManager.h; path = ../VWTUserDefaultsManager.h; sourceTree = "<group>"; };
 		91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWTUserDefaultsManager.m; path = ../VWTUserDefaultsManager.m; sourceTree = "<group>"; };
 		91DF23CC16D0AF3C0074FD66 /* Dev Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Dev Notes.txt"; sourceTree = "<group>"; };
+		EDB4A7F616FD5766001274B7 /* NSArray+Iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Iterator.h"; sourceTree = "<group>"; };
+		EDB4A7F716FD5766001274B7 /* NSArray+Iterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Iterator.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				9100D313166091070002AC7A /* AppDelegate.h */,
+				EDB4A7F616FD5766001274B7 /* NSArray+Iterator.h */,
+				EDB4A7F716FD5766001274B7 /* NSArray+Iterator.m */,
 				9100D314166091070002AC7A /* AppDelegate.m */,
 				91DF23C716D0832A0074FD66 /* VWTUserDefaultsManager.h */,
 				91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */,
@@ -212,6 +217,7 @@
 				9100D315166091070002AC7A /* AppDelegate.m in Sources */,
 				918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */,
 				91DF23C916D0832A0074FD66 /* VWTUserDefaultsManager.m in Sources */,
+				EDB4A7F816FD5766001274B7 /* NSArray+Iterator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
