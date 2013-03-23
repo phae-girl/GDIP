@@ -8,7 +8,7 @@
 
 @interface VWTUserDefaultsManager ()
 @property NSUserDefaults *userDefaults;
-@property NSArray *checkboxstates;
+@property NSArray *checkBoxStateKeys;
 
 @end
 
@@ -18,9 +18,9 @@
 {
     self = [super init];
     if (self) {
-        _checkboxstates = @[@"externalIPAddressCheckBoxState", @"externalHostNameCheckBoxState", @"localIPAddressCheckBoxState", @"localHostNameCheckBoxState"];
+        _checkBoxStateKeys = @[@"externalIPAddressCheckBoxState", @"externalHostNameCheckBoxState", @"localIPAddressCheckBoxState", @"localHostNameCheckBoxState"];
         _userDefaults = [NSUserDefaults standardUserDefaults];
-        for (NSString *checkBoxState in self.checkboxstates) {
+        for (NSString *checkBoxState in self.checkBoxStateKeys) {
             [self.userDefaults addObserver:self forKeyPath:checkBoxState options:NSKeyValueObservingOptionNew context:NULL];
         }
         
@@ -57,17 +57,27 @@
 
 - (void)verifyCopyButtonStatus
 {
-	if ([self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"] |
-		[self.userDefaults boolForKey:@"externalHostNameCheckBoxState"] |
-		[self.userDefaults boolForKey:@"localIPAddressCheckBoxState"] |
-		[self.userDefaults boolForKey:@"localHostNameCheckBoxState"])
-	{
-		[self.userDefaults setBool:YES forKey:@"copyButtonState"];
-	}
-	else
-	{
-		[self.userDefaults setBool:NO forKey:@"copyButtonState"];
-	}
+    for (NSString *checkBoxState in self.checkBoxStateKeys) {
+        if ([self.userDefaults boolForKey:checkBoxState]) {
+            [self.userDefaults setBool:YES forKey:@"copyButtonState"];
+            break;
+        }
+        else
+            [self.userDefaults setBool:NO forKey:@"copyButtonState"];
+        
+    }
+
+//	if ([self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"] |
+//		[self.userDefaults boolForKey:@"externalHostNameCheckBoxState"] |
+//		[self.userDefaults boolForKey:@"localIPAddressCheckBoxState"] |
+//		[self.userDefaults boolForKey:@"localHostNameCheckBoxState"])
+//	{
+//		[self.userDefaults setBool:YES forKey:@"copyButtonState"];
+//	}
+//	else
+//	{
+//		[self.userDefaults setBool:NO forKey:@"copyButtonState"];
+//	}
 }
 
 - (NSDictionary *)checkCopyableItems
