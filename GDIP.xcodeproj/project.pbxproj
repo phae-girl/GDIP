@@ -106,9 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				9100D313166091070002AC7A /* AppDelegate.h */,
+				9100D314166091070002AC7A /* AppDelegate.m */,
 				EDB4A7F616FD5766001274B7 /* NSArray+Iterator.h */,
 				EDB4A7F716FD5766001274B7 /* NSArray+Iterator.m */,
-				9100D314166091070002AC7A /* AppDelegate.m */,
 				91DF23C716D0832A0074FD66 /* VWTUserDefaultsManager.h */,
 				91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */,
 				918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */,
