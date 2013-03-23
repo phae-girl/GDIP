@@ -8,6 +8,7 @@
 
 @interface VWTUserDefaultsManager ()
 @property NSUserDefaults *userDefaults;
+@property NSArray *checkboxstates;
 
 @end
 
@@ -17,12 +18,18 @@
 {
     self = [super init];
     if (self) {
+        _checkboxstates = @[@"externalIPAddressCheckBoxState", @"externalHostNameCheckBoxState", @"localIPAddressCheckBoxState", @"localHostNameCheckBoxState"];
         _userDefaults = [NSUserDefaults standardUserDefaults];
-		[self.userDefaults addObserver:self forKeyPath:@"masterCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"externalIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"externalHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"localIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
-		[self.userDefaults addObserver:self forKeyPath:@"localHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+        for (NSString *checkBoxState in self.checkboxstates) {
+            [self.userDefaults addObserver:self forKeyPath:checkBoxState options:NSKeyValueObservingOptionNew context:NULL];
+        }
+        
+//		[self.userDefaults addObserver:self forKeyPath:@"masterCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+//		[self.userDefaults addObserver:self forKeyPath:@"externalIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+//		[self.userDefaults addObserver:self forKeyPath:@"externalHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+//		[self.userDefaults addObserver:self forKeyPath:@"localIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+//		[self.userDefaults addObserver:self forKeyPath:@"localHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+
 		[self verifyCopyButtonStatus];
     }
     return self;
