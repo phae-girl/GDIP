@@ -24,7 +24,7 @@
             [self.userDefaults addObserver:self forKeyPath:checkBoxState options:NSKeyValueObservingOptionNew context:NULL];
         }
         
-//		[self.userDefaults addObserver:self forKeyPath:@"masterCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
+        [self.userDefaults addObserver:self forKeyPath:@"masterCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
 //		[self.userDefaults addObserver:self forKeyPath:@"externalIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
 //		[self.userDefaults addObserver:self forKeyPath:@"externalHostNameCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
 //		[self.userDefaults addObserver:self forKeyPath:@"localIPAddressCheckBoxState" options:NSKeyValueObservingOptionNew context:NULL];
