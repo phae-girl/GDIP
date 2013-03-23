@@ -38,20 +38,31 @@
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 	if ([keyPath isEqualToString:@"masterCheckBoxState"] && [change[@"new"] boolValue]) {
-		[self.userDefaults setBool:YES forKey:@"externalIPAddressCheckBoxState"];
-		[self.userDefaults setBool:YES forKey:@"externalHostNameCheckBoxState"];
-		[self.userDefaults setBool:YES forKey:@"localIPAddressCheckBoxState"];
-		[self.userDefaults setBool:YES forKey:@"localHostNameCheckBoxState"];
+		for (NSString *checkBoxState in self.checkBoxStateKeys) {
+			[self.userDefaults setBool:YES forKey:checkBoxState];
+		}
+		
+//		[self.userDefaults setBool:YES forKey:@"externalIPAddressCheckBoxState"];
+//		[self.userDefaults setBool:YES forKey:@"externalHostNameCheckBoxState"];
+//		[self.userDefaults setBool:YES forKey:@"localIPAddressCheckBoxState"];
+//		[self.userDefaults setBool:YES forKey:@"localHostNameCheckBoxState"];
 		
 	}
-	if ([keyPath isEqualToString:@"externalIPAddressCheckBoxState"] |
-		[keyPath isEqualToString:@"externalHostNameCheckBoxState"] |
-		[keyPath isEqualToString:@"localIPAddressCheckBoxState"] |
-		[keyPath isEqualToString:@"localHostNameCheckBoxState"] &&
-		![change[@"new"] boolValue])
-	{
-		[self.userDefaults setBool:NO forKey:@"masterCheckBoxState"];
+	for (NSString *checkBoxState in self.checkBoxStateKeys) {
+		if ([keyPath isEqualToString:checkBoxState] && ![change[@"new"] boolValue]) {
+			[self.userDefaults setBool:NO forKey:@"masterCheckBoxState"];
+			break;
+		}
 	}
+	
+//	if ([keyPath isEqualToString:@"externalIPAddressCheckBoxState"] |
+//		[keyPath isEqualToString:@"externalHostNameCheckBoxState"] |
+//		[keyPath isEqualToString:@"localIPAddressCheckBoxState"] |
+//		[keyPath isEqualToString:@"localHostNameCheckBoxState"] &&
+//		![change[@"new"] boolValue])
+//	{
+//		[self.userDefaults setBool:NO forKey:@"masterCheckBoxState"];
+//	}
 	[self verifyCopyButtonStatus];
 }
 
