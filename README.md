@@ -37,5 +37,5 @@ Really, this is such a trivial app that anyone could have thought it up, and I'm
 
 [1]: http://www.cocoawithlove.com/2008/09/cocoa-application-driven-by-http-data.html (Cocoa with Love: A Cocoa application driven by HTTP data)
 [2]: http://veganswithtypewriters.com/ (Vegans With Typewriters)
-[3]: http://nsbrief.com/ (NSBrief)
 [4]: http://veganswithtypewriters.com/gdip (GDIP — Vegans With Typewriters)
+[3]: http://nsbrief.com/ (NSBrief)
