@@ -38,7 +38,10 @@
 
 - (void)processorDidRetriveAddressesAndHosts:(NSDictionary *)addressesAndHosts
 {
-	self.addressesAndHostsForViews = [NSMutableDictionary dictionaryWithDictionary:addressesAndHosts];
+	self.externalIPAddressLabel.stringValue = [addressesAndHosts[EAP_EXTERNAL_IP] copy];
+    self.externalHostNameLabel.stringValue = [addressesAndHosts[EAP_EXTERNAL_HOST] copy];
+    self.localIPAddressLabel.stringValue = [addressesAndHosts[EAP_LOCAL_IP] copy];
+    self.localHostNameLabel.stringValue = [addressesAndHosts[EAP_LOCAL_HOST] copy];
 	[self hideAddressAndHostLabels];
 }
 
@@ -60,14 +63,22 @@
 
 - (void)hideAddressAndHostLabels
 {
-	[self.addressLabels each:^(NSTextField *label){[label setFrameOrigin:NSMakePoint(-label.frame.size.width, label.frame.origin.y)];}];
+	[self.addressLabels each:^(NSTextField *label)
+	{
+		[label setFrameOrigin:NSMakePoint(-label.frame.size.width, label.frame.origin.y)];
+		[label setHidden:YES];
+	}];
 }
 
 - (void)slideInAddressAndHostLabels
 {
 	[NSAnimationContext beginGrouping];
-	[[NSAnimationContext currentContext] setDuration:0.5f];
-	[self.addressLabels each:^(NSTextField *label){[[label animator] setFrameOrigin:NSMakePoint(0, label.frame.origin.y)];}];
+	[[NSAnimationContext currentContext] setDuration:1.0f];
+	[self.addressLabels each:^(NSTextField *label)
+	{
+		[label setHidden:NO];
+		[[label animator] setFrameOrigin:NSMakePoint(0, label.frame.origin.y)];
+	}];
 	[NSAnimationContext endGrouping];
 }
 
@@ -77,16 +88,16 @@
 	NSMutableArray *preCopyArray = [NSMutableArray array];
 	NSDictionary *copyableItems = [NSDictionary dictionaryWithDictionary:[self.defaultsManager checkCopyableItems]];
 	if ([copyableItems[@"externalIPAddressIsCopyable"] boolValue]) {
-		[preCopyArray addObject:self.addressesAndHostsForViews[@"externalIPAddress"]];
+		[preCopyArray addObject:self.externalIPAddressLabel.stringValue];
 	}
 	if ([copyableItems[@"externalHostNameIsCopyable"] boolValue]) {
-		[preCopyArray addObject:self.addressesAndHostsForViews[@"externalHostName"]];
+		[preCopyArray addObject:self.externalHostNameLabel.stringValue];
 	}
 	if ([copyableItems[@"localIPAddressIsCopyable"] boolValue]) {
-		[preCopyArray addObject:self.addressesAndHostsForViews[@"localIPAddress"]];
+		[preCopyArray addObject:self.localIPAddressLabel.stringValue];
 	}
 	if ([copyableItems[@"localHostNameIsCopyable"] boolValue]) {
-		[preCopyArray addObject:self.addressesAndHostsForViews[@"localHostName"]];
+		[preCopyArray addObject:self.localHostNameLabel.stringValue];
 	}
 	
 	[pasteboard clearContents];

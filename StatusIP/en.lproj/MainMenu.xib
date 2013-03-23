@@ -64,7 +64,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="NSTextField" id="829778362">
 								<reference key="NSNextResponder" ref="859262065"/>
-								<int key="NSvFlags">268</int>
+								<int key="NSvFlags">-2147483380</int>
 								<string key="NSFrame">{{-3, 0}, {38, 17}}</string>
 								<reference key="NSSuperview" ref="859262065"/>
 								<reference key="NSWindow"/>
@@ -117,7 +117,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="NSTextField" id="849909536">
 								<reference key="NSNextResponder" ref="238159960"/>
-								<int key="NSvFlags">268</int>
+								<int key="NSvFlags">-2147483380</int>
 								<string key="NSFrame">{{-3, 0}, {38, 17}}</string>
 								<reference key="NSSuperview" ref="238159960"/>
 								<reference key="NSWindow"/>
@@ -150,7 +150,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="NSTextField" id="448571663">
 								<reference key="NSNextResponder" ref="99043852"/>
-								<int key="NSvFlags">268</int>
+								<int key="NSvFlags">-2147483380</int>
 								<string key="NSFrame">{{-3, 0}, {38, 17}}</string>
 								<reference key="NSSuperview" ref="99043852"/>
 								<reference key="NSWindow"/>
@@ -183,7 +183,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="NSTextField" id="40782738">
 								<reference key="NSNextResponder" ref="537180470"/>
-								<int key="NSvFlags">268</int>
+								<int key="NSvFlags">-2147483380</int>
 								<string key="NSFrame">{{-3, 0}, {38, 17}}</string>
 								<reference key="NSSuperview" ref="537180470"/>
 								<reference key="NSWindow"/>
@@ -432,6 +432,7 @@
 						<string key="NSFrame">{{658, 13}, {128, 32}}</string>
 						<reference key="NSSuperview" ref="122421760"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="716967817">
@@ -804,70 +805,6 @@
 						</object>
 					</object>
 					<int key="connectionID">1061</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.addressesAndHostsForViews.externalIPAddress</string>
-						<reference key="source" ref="40782738"/>
-						<reference key="destination" ref="976324537"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="40782738"/>
-							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: self.addressesAndHostsForViews.externalIPAddress</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.addressesAndHostsForViews.externalIPAddress</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">1294</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.addressesAndHostsForViews.externalHostName</string>
-						<reference key="source" ref="448571663"/>
-						<reference key="destination" ref="976324537"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="448571663"/>
-							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: self.addressesAndHostsForViews.externalHostName</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.addressesAndHostsForViews.externalHostName</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">1297</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.addressesAndHostsForViews.localIPAddress</string>
-						<reference key="source" ref="849909536"/>
-						<reference key="destination" ref="976324537"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="849909536"/>
-							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: self.addressesAndHostsForViews.localIPAddress</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.addressesAndHostsForViews.localIPAddress</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">1300</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.addressesAndHostsForViews.localHostName</string>
-						<reference key="source" ref="829778362"/>
-						<reference key="destination" ref="976324537"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="829778362"/>
-							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">value: self.addressesAndHostsForViews.localHostName</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.addressesAndHostsForViews.localHostName</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">1309</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">

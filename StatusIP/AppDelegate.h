@@ -13,8 +13,6 @@
 @property (weak) IBOutlet NSTextField *externalIPAddressLabel, *externalHostNameLabel, *localIPAddressLabel, *localHostNameLabel;
 @property (weak) IBOutlet NSView *externalIPAddressView, *externalHostNameView, *localIPAddressView, *localHostNameView;
 
-@property NSMutableDictionary *addressesAndHostsForViews;
-
 - (IBAction)copyAddressesAndHostsToPasteboard:(id)sender;
 - (IBAction)quitApp:(id)sender;
 - (IBAction)refreshData:(id)sender;
