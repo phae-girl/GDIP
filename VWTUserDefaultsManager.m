@@ -93,20 +93,25 @@
 
 - (NSDictionary *)checkCopyableItems
 {
-	NSMutableDictionary *copyableItems = [NSMutableDictionary dictionary];
-	
-	if ([self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"]) {
-		copyableItems[@"externalIPAddressIsCopyable"] = @YES;
-	}
-	if ([self.userDefaults boolForKey:@"externalHostNameCheckBoxState"]) {
-		copyableItems[@"externalHostNameIsCopyable"] = @YES;
-	}
-	if ([self.userDefaults boolForKey:@"localIPAddressCheckBoxState"]) {
-		copyableItems[@"localIPAddressIsCopyable"] = @YES;
-	}
-	if ([self.userDefaults boolForKey:@"localHostNameCheckBoxState"]) {
-		copyableItems[@"localHostNameIsCopyable"] = @YES;
-	}
+	NSDictionary *copyableItems = @{@"externalIPAddressIsCopyable": [NSNumber numberWithBool:[self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"]],
+								 @"externalHostNameIsCopyable": [NSNumber numberWithBool:[self.userDefaults boolForKey:@"externalHostNameCheckBoxState"]],
+								 @"localIPAddressIsCopyable": [NSNumber numberWithBool:[self.userDefaults boolForKey:@"localIPAddressCheckBoxState"]],
+								 @"localHostNameIsCopyable": [NSNumber numberWithBool:[self.userDefaults boolForKey:@"localHostNameCheckBoxState"]]};
+
+//	NSMutableDictionary *copyableItems = [NSMutableDictionary dictionary];
+//	
+//	if ([self.userDefaults boolForKey:@"externalIPAddressCheckBoxState"]) {
+//		copyableItems[@"externalIPAddressIsCopyable"] = @YES;
+//	}
+//	if ([self.userDefaults boolForKey:@"externalHostNameCheckBoxState"]) {
+//		copyableItems[@"externalHostNameIsCopyable"] = @YES;
+//	}
+//	if ([self.userDefaults boolForKey:@"localIPAddressCheckBoxState"]) {
+//		copyableItems[@"localIPAddressIsCopyable"] = @YES;
+//	}
+//	if ([self.userDefaults boolForKey:@"localHostNameCheckBoxState"]) {
+//		copyableItems[@"localHostNameIsCopyable"] = @YES;
+//	}
 	return copyableItems;
 }
 

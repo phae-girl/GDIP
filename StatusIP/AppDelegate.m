@@ -82,16 +82,16 @@
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSMutableArray *preCopyArray = [NSMutableArray array];
 	NSDictionary *copyableItems = [NSDictionary dictionaryWithDictionary:[self.defaultsManager checkCopyableItems]];
-	if (copyableItems[@"externalIPAddressIsCopyable"]) {
+	if ([copyableItems[@"externalIPAddressIsCopyable"] boolValue]) {
 		[preCopyArray addObject:self.addressesAndHostsForViews[@"externalIPAddress"]];
 	}
-	if (copyableItems[@"externalHostNameIsCopyable"]) {
+	if ([copyableItems[@"externalHostNameIsCopyable"] boolValue]) {
 		[preCopyArray addObject:self.addressesAndHostsForViews[@"externalHostName"]];
 	}
-	if (copyableItems[@"localIPAddressIsCopyable"]) {
+	if ([copyableItems[@"localIPAddressIsCopyable"] boolValue]) {
 		[preCopyArray addObject:self.addressesAndHostsForViews[@"localIPAddress"]];
 	}
-	if (copyableItems[@"localHostNameIsCopyable"]) {
+	if ([copyableItems[@"localHostNameIsCopyable"] boolValue]) {
 		[preCopyArray addObject:self.addressesAndHostsForViews[@"localHostName"]];
 	}
 	
