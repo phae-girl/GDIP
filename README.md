@@ -1,3 +1,8 @@
+March 24, 2013
+==============
+
+Still the same great functionality. Did some polish on the UI. Branched off GDIPAlt for those with 10.6 and 10.7.
+
 March 23, 2013
 ==============
 
