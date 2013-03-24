@@ -1,4 +1,0 @@
-- Add custom animated views to popover @done
-- Set up Refresh action
-- Set up Settings panel
-- Finish converting for-in to blocks with NSArray Extension @done
