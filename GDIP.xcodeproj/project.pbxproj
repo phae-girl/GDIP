@@ -13,7 +13,6 @@
 		9100D312166091070002AC7A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9100D310166091070002AC7A /* Credits.rtf */; };
 		9100D315166091070002AC7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100D314166091070002AC7A /* AppDelegate.m */; };
 		9100D318166091080002AC7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100D316166091080002AC7A /* MainMenu.xib */; };
-		912CE27616EC599100C45DA2 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 912CE27516EC599100C45DA2 /* TODO.txt */; };
 		915F77F516EDBD5E0092D190 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 915F77F416EDBD5E0092D190 /* README.md */; };
 		918BA3AD16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */; };
 		919AB57B16CF2C280075B2AC /* icons.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 919AB57816CF2C280075B2AC /* icons.iconset */; };
@@ -37,7 +36,6 @@
 		9100D313166091070002AC7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9100D314166091070002AC7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9100D317166091080002AC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		912CE27516EC599100C45DA2 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		915F77F416EDBD5E0092D190 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		918BA3AB16C0E0ED00A842A8 /* VWTExternalAddressProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWTExternalAddressProcessor.h; sourceTree = "<group>"; };
 		918BA3AC16C0E0ED00A842A8 /* VWTExternalAddressProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWTExternalAddressProcessor.m; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 		919AB57A16CF2C280075B2AC /* statusBarRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusBarRed.png; sourceTree = "<group>"; };
 		91DF23C716D0832A0074FD66 /* VWTUserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWTUserDefaultsManager.h; path = ../VWTUserDefaultsManager.h; sourceTree = "<group>"; };
 		91DF23C816D0832A0074FD66 /* VWTUserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWTUserDefaultsManager.m; path = ../VWTUserDefaultsManager.m; sourceTree = "<group>"; };
-		91DF23CC16D0AF3C0074FD66 /* Dev Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Dev Notes.txt"; sourceTree = "<group>"; };
 		EDB4A7F616FD5766001274B7 /* NSArray+Iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Iterator.h"; sourceTree = "<group>"; };
 		EDB4A7F716FD5766001274B7 /* NSArray+Iterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Iterator.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				915F77F416EDBD5E0092D190 /* README.md */,
-				912CE27516EC599100C45DA2 /* TODO.txt */,
-				91DF23CC16D0AF3C0074FD66 /* Dev Notes.txt */,
 				9100D307166091070002AC7A /* GDIP */,
 				9100D300166091070002AC7A /* Frameworks */,
 				9100D2FE166091070002AC7A /* Products */,
@@ -201,7 +196,6 @@
 				919AB57B16CF2C280075B2AC /* icons.iconset in Resources */,
 				919AB57C16CF2C280075B2AC /* statusBarGreen.png in Resources */,
 				919AB57D16CF2C280075B2AC /* statusBarRed.png in Resources */,
-				912CE27616EC599100C45DA2 /* TODO.txt in Resources */,
 				915F77F516EDBD5E0092D190 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
